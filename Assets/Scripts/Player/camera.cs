@@ -11,7 +11,10 @@ public class camera : MonoBehaviour
     public bool colup;
     public bool coldown;
 
-    
+    public float leftbound;
+    public float rightbound;
+    public float upbound;
+    public float downbound;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,6 +23,8 @@ public class camera : MonoBehaviour
         colright = false; 
         colup = false; 
         coldown = false;
+
+        //player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
@@ -31,10 +36,10 @@ public class camera : MonoBehaviour
         }
         else
         {
-            if(colleft && coldown || colleft && colup) //if we are at the corner of the map, camera should not move. But we should still check for when we leave the area to restore control.
+            if(colleft && coldown || colleft && colup || coldown && colright) //if we are at the corner of the map, camera should not move. But we should still check for when we leave the area to restore control.
             {
-                Debug.Log("Corner collision");
-                
+                //Debug.Log("Corner collision");
+                checkRight();
                 checkLeft();
                 checkDown();
                 checkUp();
@@ -78,7 +83,7 @@ public class camera : MonoBehaviour
     {
         if(!colleft && !colright && !colup && !coldown) //if no collisions are occurring on any axis, restore control to follow player freely
         {
-            Debug.Log("Youre not colliding with anything!");
+            //Debug.Log("Youre not colliding with anything!");
             colliding = false;
         }
     }
@@ -88,23 +93,23 @@ public class camera : MonoBehaviour
         if (colleft)
         {
 
-            transform.position = new Vector2(0f, player.transform.position.y); //execute the movement of the camera
+            transform.position = new Vector3(leftbound, player.transform.position.y, -6f); //execute the movement of the camera
             checkLeft(); //make sure the camera does not go out of map boundaries
 
         }
         if (coldown)
         {
-            transform.position = new Vector2(player.transform.position.x, 0f);
+            transform.position = new Vector3(player.transform.position.x, downbound, -6f);
             checkDown();
         }
         if (colright)
         {
-            transform.position = new Vector2(72f, player.transform.position.y); 
+            transform.position = new Vector3(rightbound, player.transform.position.y, -6f); 
             checkRight();
         }
         if (colup)
         {
-            transform.position = new Vector2(player.transform.position.x, 12.8f); //these hardcoded values are close to the limits where the camera meets the walls, get it just right to reduce jumpiness
+            transform.position = new Vector3(player.transform.position.x, upbound, -6f); //these hardcoded values are close to the limits where the camera meets the walls, get it just right to reduce jumpiness
 
             checkUp();
         }
@@ -112,7 +117,7 @@ public class camera : MonoBehaviour
 
     void checkLeft()
     {
-        if (player.transform.position.x > -0.16f) //If no longer colliding with wall, set direction collision to false
+        if (player.transform.position.x > leftbound) //If no longer colliding with wall, set direction collision to false
         {
             colleft = false;
             //colliding = false;
@@ -121,7 +126,7 @@ public class camera : MonoBehaviour
 
     void checkUp()
     {
-        if (player.transform.position.y < 12.4f)
+        if (player.transform.position.y < upbound)
         {
             colup = false;
             //colliding = false;
@@ -130,7 +135,7 @@ public class camera : MonoBehaviour
 
     void checkDown()
     {
-        if (player.transform.position.y > 0f)
+        if (player.transform.position.y > downbound)
         {
             coldown = false;
             //colliding = false;
@@ -139,7 +144,7 @@ public class camera : MonoBehaviour
 
     void checkRight()
     {
-        if (player.transform.position.x < 72f)
+        if (player.transform.position.x < rightbound)
         {
             colright = false;
             //colliding = false;

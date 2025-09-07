@@ -1,7 +1,6 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class taoffice : MonoBehaviour
+public class automata : MonoBehaviour
 {
     private bool able_to_enter = false;
 
@@ -45,6 +44,6 @@ public class taoffice : MonoBehaviour
 
     void changeScene()
     {
-        Debug.Log("Going into ta office"); //Coolm, change scenes
+        Debug.Log("Going into automata"); //Coolm, change scenes
     }
 }

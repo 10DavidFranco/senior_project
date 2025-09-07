@@ -7,6 +7,8 @@ public class player_movement : MonoBehaviour
     public Rigidbody2D rb;
     public float move_speed;
 
+    //public InteractionDetector interact;
+
     //to maintain the current direction the player is moving in.
     private bool hold = false;
     
@@ -21,9 +23,20 @@ public class player_movement : MonoBehaviour
     {
         checkH();
         checkV();
-
+        //checkI();
         
     }
+
+    /*private void checkI()
+    {
+        if (interact.close_to_interact)
+        {
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                Debug.Log("Executing");
+            }
+        }
+    }*/
 
     private void checkH()
     {
