@@ -157,6 +157,10 @@ MonoBehaviour:
   colright: 0
   colup: 0
   coldown: 0
+  leftbound: -0.16
+  rightbound: 72
+  upbound: 12.4
+  downbound: 0
 --- !u!61 &6706456855322922646
 BoxCollider2D:
   m_ObjectHideFlags: 0
