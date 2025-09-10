@@ -46,5 +46,6 @@ public class cslab : MonoBehaviour
     void changeScene()
     {
         Debug.Log("Going into cs lab"); //Coolm, change scenes
+        SceneManager.LoadScene("cs_lab");
     }
 }
