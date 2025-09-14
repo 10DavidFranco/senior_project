@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - dude
+  - bullet
+  - wall
   layers:
   - Default
   - TransparentFX
@@ -17,8 +19,8 @@ TagManager:
   - camera
   - cambound
   - player
-  - 
-  - 
+  - p_bound
+  - bullet
   - 
   - 
   - 

@@ -47,7 +47,7 @@ public class leftstairs : MonoBehaviour
     void changeScene()
     {
         Debug.Log("Changing floors from left"); //Coolm, change scenes
-        PlayerPrefs.SetInt("stairs",0);
+        PlayerPrefs.SetInt("spawn",7);
         SceneManager.LoadScene("second_floor");
     }
 }

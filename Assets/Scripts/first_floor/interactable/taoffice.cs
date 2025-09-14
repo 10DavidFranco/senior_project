@@ -46,5 +46,6 @@ public class taoffice : MonoBehaviour
     void changeScene()
     {
         Debug.Log("Going into ta office"); //Coolm, change scenes
+        PlayerPrefs.SetInt("spawn", 1);
     }
 }

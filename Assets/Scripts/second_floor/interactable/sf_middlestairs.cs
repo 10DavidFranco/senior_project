@@ -46,7 +46,7 @@ public class sf_middlestairs : MonoBehaviour
     void changeScene()
     {
         Debug.Log("Changing floors down middle"); //cool, go upstairs
-        PlayerPrefs.SetInt("stairs", 4);
+        PlayerPrefs.SetInt("spawn", 4);
         SceneManager.LoadScene("first_floor");
     }
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class dsa : MonoBehaviour
 {
@@ -45,5 +46,7 @@ public class dsa : MonoBehaviour
     void changeScene()
     {
         Debug.Log("Going into dsa"); //Coolm, change scenes
+        PlayerPrefs.SetInt("spawn", 8);
+        SceneManager.LoadScene("cs3");
     }
 }

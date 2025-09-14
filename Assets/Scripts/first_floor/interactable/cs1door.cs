@@ -46,5 +46,7 @@ public class cs1door : MonoBehaviour
     void changeScene()
     {
         Debug.Log("Going into cs1"); //Coolm, change scenes
+        PlayerPrefs.SetInt("spawn", 3);
+        SceneManager.LoadScene("cs1");
     }
 }

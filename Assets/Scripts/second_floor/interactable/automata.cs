@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class automata : MonoBehaviour
 {
@@ -45,5 +46,7 @@ public class automata : MonoBehaviour
     void changeScene()
     {
         Debug.Log("Going into automata"); //Coolm, change scenes
+        PlayerPrefs.SetInt("spawn", 10);
+        SceneManager.LoadScene("cs4");
     }
 }
