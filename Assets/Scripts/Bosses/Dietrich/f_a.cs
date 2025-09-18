@@ -3,6 +3,8 @@ using System.Collections;
 
 public class f_a : MonoBehaviour
 {
+    public int health;
+
     public float burst_count;
     public float bullet_speed;
     public float burst_time;
@@ -23,6 +25,7 @@ public class f_a : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        health = 5;
         d_script = GameObject.Find("Dietrich").GetComponent<dietrich>();
         p_t = GameObject.Find("Player").GetComponent<Transform>();
         
@@ -95,5 +98,23 @@ public class f_a : MonoBehaviour
             yield return new WaitForSeconds(burst_time);
         }
         
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.gameObject.layer == 13)
+        {
+            health--;
+
+            checkDeath();
+        }
+    }
+
+    void checkDeath()
+    {
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

@@ -22,7 +22,11 @@ public class player_move : MonoBehaviour
     public float moveSpeed = 25f;
     bool isFacingRight = false;
     public float jumpPower = 30f;
-    bool isGrounded = false;
+    public bool isGrounded = false;
+
+
+    public float iduration;
+    private bool hittable;
     
 
 
@@ -35,6 +39,7 @@ public class player_move : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         trailRenderer = GetComponent<TrailRenderer>();
+        hittable = true;
     }
 
     // Update is called once per frame
@@ -130,26 +135,51 @@ public class player_move : MonoBehaviour
         isFacingRight = !isFacingRight;
         transform.Rotate(1f, 180f, 0f);
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
 
+    public void Jumping()
+    {
         isGrounded = true;
         animator.SetBool("isJumping", !isGrounded);
-
-
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        Debug.Log(other);
-        if (other.gameObject.CompareTag("bullet"))
-        {
-            Debug.Log("Player has been hit!!!");
 
-            health--;
-            Debug.Log(health);
-            checkDeath();
+    
+    
+
+
+
+
+
+
+
+
+    ///DAMAGE
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+
+
+        if (hittable)
+        {
+            Debug.Log(other);
+            if (other.gameObject.CompareTag("bullet"))
+            {
+                Debug.Log("Player has been hit!!!");
+
+                health--;
+                hittable = false;
+                Debug.Log(health);
+                checkDeath();
+
+                StartCoroutine(iFrames());
+            }
         }
+        
+    }
+
+    IEnumerator iFrames()
+    {
+        yield return new WaitForSeconds(iduration);
+        hittable = true;
     }
 
     private void checkDeath()
