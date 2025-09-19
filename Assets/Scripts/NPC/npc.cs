@@ -72,11 +72,6 @@ public class npc : MonoBehaviour
         }
     }
 
-
-    public void Test()
-    {
-        Debug.Log("this should eb workign");
-    }
     public void Nextline()
     {
         ContButton.SetActive(false);
