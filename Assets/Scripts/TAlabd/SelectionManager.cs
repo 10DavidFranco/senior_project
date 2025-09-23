@@ -4,6 +4,16 @@ using System.Collections;
 using TMPro;
 public class GridSelection : MonoBehaviour
 {
+
+    //for questions and answers system 
+    [System.Serializable]
+    public class QuestionData
+    {
+        public string question;
+        public string[] answers = new string[4]; // number of answers
+    }
+
+
     //for grid
     public int columns = 4; // Number of columns in your grid
     public Image[] items; // Assign all your grid items in order
@@ -12,10 +22,13 @@ public class GridSelection : MonoBehaviour
     private int currentIndex = 0;
 
     //for dialog
+    public GameObject whiteboard;
+    public GameObject titles;
+    public GameObject answers;
     public GameObject dialoguePanel;
     public TextMeshProUGUI dialogueText;
-    public string[][] dialoguesPerBox; // Each element is an array of dialogue lines for that box
-    public string[] dialogue;
+    private QuestionData[] QuestionBoxes; // Each element is an array of dialogue lines for that box
+    public Button[] AnswerButtons;
 
     private int index;
 
@@ -25,25 +38,74 @@ public class GridSelection : MonoBehaviour
 
     void Start()
     {
+        
         UpdateSelectorPosition();
-        dialoguesPerBox = new string[][]
+        QuestionBoxes = new QuestionData[]
    {
-        new string[] { "Question 1: What is 2 + 2? " },
-        new string[] { "Question 2:"},
-        new string[] { "Question 3:" },
-        new string[] { "Question 4:" },
-        new string[] { "Question 5:" },
-        new string[] { "Question 6:" },
-        new string[] { "Question 7:" },
-        new string[] { "Question 8:" },
-        new string[] { "Question 9:" },
-        new string[] { "Question 10:" },
-        new string[] { "Question 11:" },
-        new string[] { "Question 12:"},
-        new string[] { "Question 13:" },
-        new string[] { "Question 14:" },
-        new string[] { "Question 15:" },
-        new string[] { "Question 16:" },
+        new QuestionData {
+            question = "Question 1: What is 2 + 2?",
+            answers = new string[] { "3", "4", "1", "22" }
+        },
+        new QuestionData {
+            question = "Question 1: What is 2 + 2?",
+            answers = new string[] { "3", "4", "5", "22" }
+        },
+         new QuestionData {
+            question = "Question 1: What is 2 + 2?",
+            answers = new string[] { "3", "4", "1", "22" }
+        },
+         new QuestionData {
+            question = "Question 1: What is 2 + 2?",
+            answers = new string[] { "3", "4", "1", "22" }
+        },
+          new QuestionData {
+            question = "Question 1: What is 2 + 2?",
+            answers = new string[] { "3", "4", "1", "22" }
+        },
+        new QuestionData {
+            question = "Question 1: What is 2 + 2?",
+            answers = new string[] { "3", "4", "5", "22" }
+        },
+         new QuestionData {
+            question = "Question 1: What is 2 + 2?",
+            answers = new string[] { "3", "4", "1", "22" }
+        },
+         new QuestionData {
+            question = "Question 1: What is 2 + 2?",
+            answers = new string[] { "3", "4", "1", "22" }
+        },
+          new QuestionData {
+            question = "Question 1: What is 2 + 2?",
+            answers = new string[] { "3", "4", "1", "22" }
+        },
+        new QuestionData {
+            question = "Question 1: What is 2 + 2?",
+            answers = new string[] { "3", "4", "5", "22" }
+        },
+         new QuestionData {
+            question = "Question 1: What is 2 + 2?",
+            answers = new string[] { "3", "4", "1", "22" }
+        },
+         new QuestionData {
+            question = "Question 1: What is 2 + 2?",
+            answers = new string[] { "3", "4", "1", "22" }
+        },
+          new QuestionData {
+            question = "Question 1: What is 2 + 2?",
+            answers = new string[] { "3", "4", "1", "22" }
+        },
+        new QuestionData {
+            question = "Question 1: What is 2 + 2?",
+            answers = new string[] { "3", "4", "5", "22" }
+        },
+         new QuestionData {
+            question = "Question 1: What is 2 + 2?",
+            answers = new string[] { "3", "4", "1", "22" }
+        },
+         new QuestionData {
+            question = "Question 1: What is 2 + 2?",
+            answers = new string[] { "3", "4", "1", "22" }
+        },
 
    };
     }
@@ -58,26 +120,46 @@ public class GridSelection : MonoBehaviour
             if (dialoguePanel.activeInHierarchy)
             {
                 zeroText();
+                whiteboard.SetActive(true);
+                selector.gameObject.SetActive(true);
+                titles.SetActive(true);
             }
             else
             {
+                answers.SetActive(true);
+                selector.gameObject.SetActive(false);
+                whiteboard.SetActive(false);
+                titles.SetActive(false);
                 dialoguePanel.SetActive(true);
                 StartCoroutine(Typing());
             }
 
         }
 
+        for (int i = 0; i < AnswerButtons.Length; i++)
+        {
+            int indexCopy = i; // important for closures
+            AnswerButtons[i].onClick.RemoveAllListeners();
+            AnswerButtons[i].onClick.AddListener(() => {
+                OnAnswerSelected(indexCopy);
+                ReturnToGrid();
+            });
+       
+        }
+
         //if (dialogueText.text == dialogue[index])
         //{
 
-           // ContButton.SetActive(true);
-       // }
+        // ContButton.SetActive(true);
+        // }
 
 
     }
 
     void HandleInput()
     {
+        if (!whiteboard.activeSelf) return;
+
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             if ((currentIndex + 1) % columns != 0 && currentIndex + 1 < items.Length)
@@ -118,15 +200,49 @@ public class GridSelection : MonoBehaviour
 
     IEnumerator Typing()
     {
-        dialogue = dialoguesPerBox[currentIndex];
-        foreach (char letter in dialogue[index].ToCharArray())
+        // for whiteboard/ question
+        QuestionData qData = QuestionBoxes[currentIndex];
+        foreach (char letter in qData.question.ToCharArray())
         {
             dialogueText.text += letter;
             yield return new WaitForSeconds(wordspeed);
         }
+
+        //for answers
+        for (int i = 0; i < AnswerButtons.Length; i++)
+        {
+            TextMeshProUGUI btnText = AnswerButtons[i].GetComponentInChildren<TextMeshProUGUI>();
+            btnText.text = qData.answers[i];
+        }
+
     }
 
-    public void Nextline()
+
+
+    void OnAnswerSelected(int answerIndex)
+    {
+        Debug.Log("Player chose: " + QuestionBoxes[currentIndex].answers[answerIndex]);
+        // Check correctness, give points, etc.
+    }
+
+    public void ReturnToGrid()
+    {
+        // Hide the question UI
+        answers.SetActive(false);
+        dialoguePanel.SetActive(false);
+
+        // Show the grid UI
+        whiteboard.SetActive(true);
+        titles.SetActive(true);
+        selector.gameObject.SetActive(true);
+
+        // Reset dialogue text for next question
+        dialogueText.text = "";
+        index = 0;
+    }
+
+
+    /*public void Nextline()
     {
         //ContButton.SetActive(false);
 
@@ -143,6 +259,6 @@ public class GridSelection : MonoBehaviour
 
         }
 
-    }
+    }*/
 
 }
