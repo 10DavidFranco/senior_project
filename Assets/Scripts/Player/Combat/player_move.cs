@@ -20,14 +20,15 @@ public class player_move : MonoBehaviour
 
     float horizontalInput;
     public float moveSpeed = 25f;
-    bool isFacingRight = false;
+    public bool isFacingRight = true;
     public float jumpPower = 30f;
     public bool isGrounded = false;
 
 
     public float iduration;
     private bool hittable;
-    
+
+    public bool isAiming;
 
 
     Rigidbody2D rb;
@@ -40,6 +41,7 @@ public class player_move : MonoBehaviour
         animator = GetComponent<Animator>();
         trailRenderer = GetComponent<TrailRenderer>();
         hittable = true;
+        isAiming = false;
     }
 
     // Update is called once per frame
@@ -80,7 +82,16 @@ public class player_move : MonoBehaviour
         {
             return;
         }
-        rb.linearVelocity = new Vector2(horizontalInput * moveSpeed, rb.linearVelocity.y);
+
+        if (!isAiming)
+        {
+            rb.linearVelocity = new Vector2(horizontalInput * moveSpeed, rb.linearVelocity.y);
+        }
+        else
+        {
+            rb.linearVelocity = new Vector2(0f, 0f);
+        }
+        
 
         animator.SetFloat("xVelocity", math.abs(rb.linearVelocity.x));
         animator.SetFloat("yVelocity", rb.linearVelocity.y);
@@ -120,11 +131,11 @@ public class player_move : MonoBehaviour
 
     private void flipchecker()
     {
-        if (horizontalInput > 0 && isFacingRight)
+        if (horizontalInput > 0 && !isFacingRight)
         {
             FlipSprite();
         }
-        else if (horizontalInput < 0 && !isFacingRight)
+        else if (horizontalInput < 0 && isFacingRight)
         {
             FlipSprite();
         }

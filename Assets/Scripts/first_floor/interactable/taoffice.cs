@@ -47,5 +47,7 @@ public class taoffice : MonoBehaviour
     {
         Debug.Log("Going into ta office"); //Coolm, change scenes
         PlayerPrefs.SetInt("spawn", 1);
+
+        SceneManager.LoadScene("TAlab");
     }
 }

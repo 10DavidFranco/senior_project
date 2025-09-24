@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class dietrich : MonoBehaviour
@@ -237,7 +238,17 @@ public class dietrich : MonoBehaviour
         if(col.gameObject.layer == 13)
         {
             health--;
+            checkDeath();
             Debug.Log("HIT!");
+        }
+
+    }
+
+    void checkDeath()
+    {
+        if(health <= 0)
+        {
+            SceneManager.LoadScene("first_floor");
         }
     }
 }

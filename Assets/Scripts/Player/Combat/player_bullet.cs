@@ -5,9 +5,9 @@ public class player_bullet : MonoBehaviour
     public float speed;
     public Rigidbody2D rb;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public void Shoot()
+    public void Shoot(Vector3 direction)
     {
-        rb.linearVelocity = transform.right * speed;
+        rb.linearVelocity = direction * speed;
     }
     public void ShootUp()
     {

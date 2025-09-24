@@ -472,9 +472,11 @@ MonoBehaviour:
   dashcooldown: 0.1
   health: 3
   moveSpeed: 3
+  isFacingRight: 1
   jumpPower: 6
   isGrounded: 0
   iduration: 1
+  isAiming: 0
 --- !u!95 &123510006
 Animator:
   serializedVersion: 7
@@ -1077,6 +1079,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firepoint: {fileID: 1255845008}
   bulletPrefab: {fileID: 5703030085318641945, guid: 756f38367c0e1934fbd50d5d9d5eddf9, type: 3}
+  pm: {fileID: 123510004}
 --- !u!1 &1812325947
 GameObject:
   m_ObjectHideFlags: 0
