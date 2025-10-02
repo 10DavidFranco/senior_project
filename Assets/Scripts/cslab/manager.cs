@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using System.Collections;
 
 public class manager : MonoBehaviour
 {
@@ -13,13 +14,17 @@ public class manager : MonoBehaviour
         public bool unlocked;
         //to show installed text
         public bool installed;
-
-        public lang(Animator a, bool b, bool i)
+        //to monitor when unlockable
+        public int q_limit;
+        public lang(Animator a, bool b, bool i, int q)
         {
             
             anim = a;
             unlocked = b;
             installed = i;
+            q_limit = q;
+
+
         }
     }
     /*
@@ -52,6 +57,11 @@ public class manager : MonoBehaviour
     //IF ADDING NEW LANGUAGE, ADD HERE
 
     public Animator exitsign;
+    public int questions_answered;
+    public bool downloadable;
+
+    public float scroll_delay;
+    public bool scrollable;
 
     //private List<Animator> langs = new List<Animator>();
     private lang[] langs;
@@ -63,7 +73,7 @@ public class manager : MonoBehaviour
         //Setting the appropriate starting text
         locked.SetActive(false);
         download.SetActive(false);
-
+        questions_answered = PlayerPrefs.GetInt("q");
         //Finding language object animators
         python = GameObject.Find("python").GetComponent<Animator>();
         javascript = GameObject.Find("javascript").GetComponent<Animator>();
@@ -72,10 +82,10 @@ public class manager : MonoBehaviour
         //IF ADDING NEW LANGUAGE ADD HERE
 
         //creating lang objects for easier manipulation
-        lang py = new lang(python, true, true);
-        lang js = new lang(javascript, false, false);
-        lang cpp = new lang(cplusplus, false, false);
-        lang asmb = new lang(assembly, false, false);
+        lang py = new lang(python, true, true, 0);
+        lang js = new lang(javascript, false, false, 1);
+        lang cpp = new lang(cplusplus, false, false, 2);
+        lang asmb = new lang(assembly, false, false, 3);
         //IF ADDING NEW LANGUAGE ADD HERE
         
         //initializing langs array
@@ -87,6 +97,9 @@ public class manager : MonoBehaviour
         }*/
 
         max_length = langs.Length;
+        downloadable = false;
+        scroll_delay = 1.0f;
+        scrollable = true;
     }
 
     // Update is called once per frame
@@ -134,11 +147,47 @@ public class manager : MonoBehaviour
 
     }
 
+    void ShowInstall()
+    {
+        installed.SetActive(true);
+        download.SetActive(false);
+        locked.SetActive(false);
+    }
+
+    void ShowDownload()
+    {
+        installed.SetActive(false);
+        download.SetActive(true);
+        locked.SetActive(false);
+    }
+
+    void ShowLocked()
+    {
+        installed.SetActive(false);
+        download.SetActive(false);
+        locked.SetActive(true);
+    }
+
+    void Download()
+    {
+        Debug.Log("You have downloaded this langauge");
+        //Do some permanent PlayerPrefs tracking here. The FrontEnd UI has already been taken care of!
+
+        //IF Downloaded mark in playerprefs somehow, and then read from this value when cycling through languages and determining labels.
+    }
+
+    IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(scroll_delay);
+        scrollable = true;
+    }
+
     void checkLangs()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow) && scrollable)
         {
-
+            scrollable = false;
+            StartCoroutine(Delay());
             langs[cursor].anim.SetBool("in", false);
 
             if(cursor + 1 == max_length) //We've reached the end, time to cycle back.
@@ -152,16 +201,18 @@ public class manager : MonoBehaviour
             
             langs[cursor].anim.SetBool("in", true);
 
-            if (langs[cursor].installed)
+
+
+
+            /*if (langs[cursor].q_limit <= questions_answered && !langs[cursor].unlocked)
+            {
+                langs[cursor].unlocked = true;
+
+                if()
+            }else if (langs[cursor].installed)
             {
                 installed.SetActive(true);
                 download.SetActive(false);
-                locked.SetActive(false);
-            }
-            else if (langs[cursor].unlocked)
-            {
-                installed.SetActive(false);
-                download.SetActive(true);
                 locked.SetActive(false);
             }
             else
@@ -169,7 +220,66 @@ public class manager : MonoBehaviour
                 installed.SetActive(false);
                 download.SetActive(false);
                 locked.SetActive(true);
+            }*/
+
+
+
+
+            if (langs[cursor].installed)
+            {
+                //Debug.Log("already installed!");
+                ShowInstall();
+                downloadable = false;
             }
+            else if (langs[cursor].unlocked)
+            {
+                //Debug.Log("You can download this!");
+                ShowDownload();
+                downloadable = true;
+                /*if (Input.GetButton("Submit"))
+                {
+                    langs[cursor].installed = true;
+                    ShowInstall();
+                    Download();
+                }*/
+                //put enter logic here
+            }
+            else
+            {
+
+
+                //check if langauge CAN be unloked
+                if (langs[cursor].q_limit <= questions_answered)
+                {
+                    ShowDownload();
+                    downloadable = true;
+                    langs[cursor].unlocked = true;
+
+                    /*Debug.Log("You can download!!!!");
+                    if (Input.GetButton("Submit"))
+                    {
+                        
+                        langs[cursor].installed = true;
+                        ShowInstall();
+                        Download();
+                    }*/
+                }
+                else
+                {
+                    //else show locked
+                    downloadable = false;
+                    ShowLocked();
+                }
+                
+            }
+        }
+
+        if(downloadable && Input.GetButtonDown("Submit"))
+        {
+            langs[cursor].installed = true;
+            ShowInstall();
+            Download();
+            downloadable = false;
         }
 
 

@@ -854,6 +854,10 @@ MonoBehaviour:
   installed: {fileID: 166151821}
   download: {fileID: 1378194310}
   exitsign: {fileID: 587703973}
+  questions_answered: 0
+  downloadable: 0
+  scroll_delay: 1
+  scrollable: 0
 --- !u!1 &901041298
 GameObject:
   m_ObjectHideFlags: 0

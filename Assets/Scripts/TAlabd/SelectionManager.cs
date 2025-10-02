@@ -11,6 +11,7 @@ public class GridSelection : MonoBehaviour
     {
         public string question;
         public string[] answers = new string[4]; // number of answers
+        public int correct;
     }
 
 
@@ -43,68 +44,95 @@ public class GridSelection : MonoBehaviour
         QuestionBoxes = new QuestionData[]
    {
         new QuestionData {
-            question = "Question 1: What is 2 + 2?",
-            answers = new string[] { "3", "4", "1", "22" }
+            question = "Question 1: Which is an example of an int data type?",
+            answers = new string[] { "car", "2.22", "1", "false" },
+            correct = 2
         },
         new QuestionData {
-            question = "Question 1: What is 2 + 2?",
-            answers = new string[] { "3", "4", "5", "22" }
+            question = "Question 1: A pointer is used to store an address in memory.",
+            answers = new string[] { "True", "False", "", "" },
+            correct = 0
+        },
+         new QuestionData {
+            question = "Question 1: A worst-case runtime of O(n*n) is faster than O(log n)?",
+            answers = new string[] { "True", "False", "", "" },
+            correct = 0
         },
          new QuestionData {
             question = "Question 1: What is 2 + 2?",
-            answers = new string[] { "3", "4", "1", "22" }
-        },
-         new QuestionData {
-            question = "Question 1: What is 2 + 2?",
-            answers = new string[] { "3", "4", "1", "22" }
+            answers = new string[] { "3", "4", "1", "22" },
+            correct = 1
         },
           new QuestionData {
-            question = "Question 1: What is 2 + 2?",
-            answers = new string[] { "3", "4", "1", "22" }
+            question = "Question 2: Which of the following is NOT a control structure?",
+            answers = new string[] { "Array", "For-Loop", "If-else", "While-loop"},
+            correct = 0
         },
         new QuestionData {
-            question = "Question 1: What is 2 + 2?",
-            answers = new string[] { "3", "4", "5", "22" }
+            question = "Question 2: What is the base case in a recursive function?",
+            answers = new string[] { "3", "4", "5", "22" },
+            correct = 0
+
         },
          new QuestionData {
-            question = "Question 1: What is 2 + 2?",
-            answers = new string[] { "3", "4", "1", "22" }
+            question = "Question 2: What is 2 + 2?",
+            answers = new string[] { "3", "4", "1", "22" },
+            correct = 0
+
         },
          new QuestionData {
-            question = "Question 1: What is 2 + 2?",
-            answers = new string[] { "3", "4", "1", "22" }
+            question = "Question 2: What is 2 + 2?",
+            answers = new string[] { "3", "4", "1", "22" },
+            correct = 0
+
         },
           new QuestionData {
-            question = "Question 1: What is 2 + 2?",
-            answers = new string[] { "3", "4", "1", "22" }
+            question = "Question 3: Void functions are used to return values.",
+            answers = new string[] { "True", "False", "", "" },
+            correct = 0
+
         },
         new QuestionData {
-            question = "Question 1: What is 2 + 2?",
-            answers = new string[] { "3", "4", "5", "22" }
+            question = "Question 3: What is 2 + 2?",
+            answers = new string[] { "3", "4", "5", "22" },
+            correct = 0
+
         },
          new QuestionData {
-            question = "Question 1: What is 2 + 2?",
-            answers = new string[] { "3", "4", "1", "22" }
+            question = "Question 3: What is the runtime of Breadth-First-Search in terms of a graphs vertices and edges?",
+            answers = new string[] { "O(V+E)", "O(V*V)", "O(V log(V))", "O((V+E)log(V))"},
+            correct = 0
+
         },
          new QuestionData {
-            question = "Question 1: What is 2 + 2?",
-            answers = new string[] { "3", "4", "1", "22" }
+            question = "Question 3: What is 2 + 2?",
+            answers = new string[] { "3", "4", "1", "22" },
+            correct = 0
+
         },
           new QuestionData {
-            question = "Question 1: What is 2 + 2?",
-            answers = new string[] { "3", "4", "1", "22" }
+            question = "Question 4: What is 2 + 2?",
+            answers = new string[] { "3", "4", "1", "22" },
+            correct = 0
+
         },
         new QuestionData {
-            question = "Question 1: What is 2 + 2?",
-            answers = new string[] { "3", "4", "5", "22" }
+            question = "Question 4: What is 2 + 2?",
+            answers = new string[] { "3", "4", "5", "22" },
+            correct = 0
+
         },
          new QuestionData {
-            question = "Question 1: What is 2 + 2?",
-            answers = new string[] { "3", "4", "1", "22" }
+            question = "Question 4: What is 2 + 2?",
+            answers = new string[] { "3", "4", "1", "22" },
+            correct = 0
+
         },
          new QuestionData {
-            question = "Question 1: What is 2 + 2?",
-            answers = new string[] { "3", "4", "1", "22" }
+            question = "Question 4: P = NP?",
+            answers = new string[] { "True", "False", "", "" },
+            correct = 0
+
         },
 
    };
@@ -212,7 +240,9 @@ public class GridSelection : MonoBehaviour
         for (int i = 0; i < AnswerButtons.Length; i++)
         {
             TextMeshProUGUI btnText = AnswerButtons[i].GetComponentInChildren<TextMeshProUGUI>();
-            btnText.text = qData.answers[i];
+            btnText.text = qData.answers[i]; //this query is going out of bounds for t/f questions
+            
+            
         }
 
     }
@@ -221,7 +251,21 @@ public class GridSelection : MonoBehaviour
 
     void OnAnswerSelected(int answerIndex)
     {
-        Debug.Log("Player chose: " + QuestionBoxes[currentIndex].answers[answerIndex]);
+        //Debug.Log("Player chose: " + QuestionBoxes[currentIndex].answers[answerIndex]);
+        //Debug.Log("Player chose: " + answerIndex);
+        //Debug.Log("Correct answer: " + QuestionBoxes[currentIndex].correct);
+
+
+        if(answerIndex == QuestionBoxes[currentIndex].correct)
+        {
+            Debug.Log("CORRECT");
+            PlayerPrefs.SetInt("q", PlayerPrefs.GetInt("q") + 1);
+
+        }
+        else
+        {
+            Debug.Log("WRONG!!!");
+        }
         // Check correctness, give points, etc.
     }
 
