@@ -1,94 +1,34 @@
-using System.Collections;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
-public class npc : MonoBehaviour
+
+public class NPC : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public GameObject dialoguePanel;
-    public TextMeshProUGUI dialogueText;
-    public string[] dialogue;
-    private int index;
+    public string npcName;
+    [TextArea(3, 10)]
+    public string[] dialogueLines;
+    public Sprite portrait;
 
-
-    public GameObject ContButton;
-    public float wordspeed;
-    public bool playerIsClose;
-
+    private bool playerIsClose;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && playerIsClose)
+        if (playerIsClose && Input.GetKeyDown(KeyCode.E))
         {
-
-            if (dialoguePanel.activeInHierarchy)
-            {
-                zeroText();
-            }
-            else
-            {
-                dialoguePanel.SetActive(true);
-                StartCoroutine(Typing());
-            }
-
+            DialogueManager.Instance.StartDialogue(dialogueLines, portrait);
         }
-
-         if (dialogueText.text == dialogue[index]) { 
-
-        ContButton.SetActive(true);
-         }
     }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-       // if (other.CompareTag("Player"))
-       // {
+        //if (other.CompareTag("Player"))
             playerIsClose = true;
-        //}
     }
-    private void OnTriggerExit2D(Collider2D other1)
+
+    private void OnTriggerExit2D(Collider2D other)
     {
-        //if (other1.CompareTag("Player"))
+        //if (other.CompareTag("Player"))
         //{
             playerIsClose = false;
-            zeroText();
+            DialogueManager.Instance.EndDialogue();
         //}
     }
-
-
-
-    public void zeroText()
-    {
-        dialogueText.text = "";
-        index = 0;
-        dialoguePanel.SetActive(false);
-    }
-
-    IEnumerator Typing()
-    {
-        foreach (char letter in dialogue[index].ToCharArray())
-        {
-            dialogueText.text += letter;
-            yield return new WaitForSeconds(wordspeed);
-        }
-    }
-
-    public void Nextline()
-    {
-        ContButton.SetActive(false);
-
-        if (index < dialogue.Length - 1)
-        {
-            index++;
-            dialogueText.text = "";
-            StartCoroutine(Typing());
-
-        }
-        else
-        {
-            zeroText();
-
-        }
-
-    }
 }
-   

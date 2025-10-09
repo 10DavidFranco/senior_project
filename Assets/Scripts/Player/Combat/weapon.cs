@@ -7,6 +7,8 @@ public class weapon : MonoBehaviour
     private GameObject new_b;
     public player_move pm;
 
+    public Sprite[] bulletSprites;
+
     private float xdirection;
     private float ydirection;
     //Animator animator;
@@ -96,7 +98,11 @@ public class weapon : MonoBehaviour
     void Shoot()
     {
         new_b = Instantiate(bulletPrefab, firepoint.position + new Vector3(xdirection * 1.5f, ydirection* 1.5f, -2f), firepoint.rotation); //spawning just outside of player sprite
-        new_b.GetComponent<player_bullet>().Shoot(new Vector3(xdirection, ydirection, -2f).normalized);
+        var bullet = new_b.GetComponent<player_bullet>();
+        bullet.bulletSprites = bulletSprites;
+
+        // fire it
+        bullet.Shoot(new Vector3(xdirection, ydirection, -2f).normalized);
     }
 
     
