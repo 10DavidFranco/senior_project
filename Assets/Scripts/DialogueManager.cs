@@ -15,7 +15,7 @@ public class DialogueManager : MonoBehaviour
     private int index;
     private Coroutine typingCoroutine;
 
-    public static DialogueManager Instance; // singleton for easy access
+    public static DialogueManager Instance; 
 
     private void Awake()
     {
