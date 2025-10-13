@@ -157,10 +157,11 @@ MonoBehaviour:
   colright: 0
   colup: 0
   coldown: 0
-  leftbound: -0.16
+  leftbound: -0.11
   rightbound: 72
-  upbound: 12.4
+  upbound: 12.9
   downbound: 0
+  plaque_prefab: {fileID: 2441222160916610023, guid: cea927326d1689444bb08d281717e924, type: 3}
 --- !u!61 &6706456855322922646
 BoxCollider2D:
   m_ObjectHideFlags: 0

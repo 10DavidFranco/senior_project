@@ -4,6 +4,9 @@ using UnityEngine.SceneManagement;
 public class cs2door : MonoBehaviour
 {
     private bool able_to_enter = false;
+    public gameManager gm;
+    public camera cam;
+
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -12,7 +15,11 @@ public class cs2door : MonoBehaviour
 
         if (col.gameObject.layer == 10) // is the player next to me?
         {
-            able_to_enter = true;
+            if (gm.cs2)
+            {
+                able_to_enter = true;
+            }
+            
         }
 
 
@@ -38,15 +45,12 @@ public class cs2door : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return))//Did they press enter
         {
-            changeScene();
+            PlayerPrefs.SetInt("spawn", 5);
+            cam.showPlaque();
+            //changeScene();
         }
 
     }
 
-    void changeScene()
-    {
-        Debug.Log("Going into cs2"); //Coolm, change scenes
-        PlayerPrefs.SetInt("spawn", 5);
-        SceneManager.LoadScene("cs2");
-    }
+   
 }

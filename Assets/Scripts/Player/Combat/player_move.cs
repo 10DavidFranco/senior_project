@@ -16,7 +16,7 @@ public class player_move : MonoBehaviour
     bool canDash = true;
     TrailRenderer trailRenderer;
     public int health = 3;
-
+    public battle_cam bc;
 
     float horizontalInput;
     public float moveSpeed = 25f;
@@ -29,7 +29,7 @@ public class player_move : MonoBehaviour
     private bool hittable;
 
     public bool isAiming;
-
+    private bool dieOnce;
 
     Rigidbody2D rb;
     Animator animator;
@@ -37,6 +37,7 @@ public class player_move : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        dieOnce = false;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         trailRenderer = GetComponent<TrailRenderer>();
@@ -195,11 +196,20 @@ public class player_move : MonoBehaviour
 
     private void checkDeath()
     {
-        if (health <= 0)
+        if (health <= 0 && !dieOnce)
         {
-            Debug.Log("You Lost...");
-            SceneManager.LoadScene("first_floor");
+
+            dieOnce = !dieOnce;
+            StartCoroutine(Die());
+            
         }
+    }
+
+    IEnumerator Die()
+    {
+        bc.Fail();
+        yield return new WaitForSeconds(1.0f);
+        SceneManager.LoadScene("first_floor");
     }
 
 

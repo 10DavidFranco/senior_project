@@ -16,12 +16,25 @@ public class manager : MonoBehaviour
         public bool installed;
         //to monitor when unlockable
         public int q_limit;
-        public lang(Animator a, bool b, bool i, int q)
+        public lang(Animator a, bool b, int i, int q)
         {
             
             anim = a;
             unlocked = b;
-            installed = i;
+
+            if(i == 0)
+            {
+                installed = false;
+            }
+            else if(i == 1)
+            {
+                installed = true;
+            }
+            else
+            {
+                installed = false;
+            }
+            
             q_limit = q;
 
 
@@ -70,6 +83,7 @@ public class manager : MonoBehaviour
     void Start()
     {
         cursor = 0;
+        PlayerPrefs.SetInt("python", 1);
         //Setting the appropriate starting text
         locked.SetActive(false);
         download.SetActive(false);
@@ -82,10 +96,10 @@ public class manager : MonoBehaviour
         //IF ADDING NEW LANGUAGE ADD HERE
 
         //creating lang objects for easier manipulation
-        lang py = new lang(python, true, true, 0);
-        lang js = new lang(javascript, false, false, 1);
-        lang cpp = new lang(cplusplus, false, false, 2);
-        lang asmb = new lang(assembly, false, false, 3);
+        lang py = new lang(python, true, PlayerPrefs.GetInt("python"), 0);
+        lang js = new lang(javascript, false, PlayerPrefs.GetInt("javascript"), 1);
+        lang cpp = new lang(cplusplus, false, PlayerPrefs.GetInt("cplusplus"), 2);
+        lang asmb = new lang(assembly, false, PlayerPrefs.GetInt("assembly"), 3);
         //IF ADDING NEW LANGUAGE ADD HERE
         
         //initializing langs array
@@ -168,12 +182,30 @@ public class manager : MonoBehaviour
         locked.SetActive(true);
     }
 
-    void Download()
+    void Download(int lang)
     {
         Debug.Log("You have downloaded this langauge");
         //Do some permanent PlayerPrefs tracking here. The FrontEnd UI has already been taken care of!
 
         //IF Downloaded mark in playerprefs somehow, and then read from this value when cycling through languages and determining labels.
+        switch (lang)
+        {
+            case 0:
+                PlayerPrefs.SetInt("python", 1);
+                break;
+            case 1:
+                PlayerPrefs.SetInt("javascript", 1);
+                break;
+            case 2:
+                PlayerPrefs.SetInt("cplusplus", 1);
+                break;
+            case 3:
+                PlayerPrefs.SetInt("assembly", 1);
+                break;
+            default:
+                break;
+        }
+
     }
 
     IEnumerator Delay()
@@ -278,7 +310,7 @@ public class manager : MonoBehaviour
         {
             langs[cursor].installed = true;
             ShowInstall();
-            Download();
+            Download(cursor);
             downloadable = false;
         }
 

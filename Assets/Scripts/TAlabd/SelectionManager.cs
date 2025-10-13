@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using TMPro;
 public class GridSelection : MonoBehaviour
@@ -12,12 +13,15 @@ public class GridSelection : MonoBehaviour
         public string question;
         public string[] answers = new string[4]; // number of answers
         public int correct;
+        public bool answered = false;
+        public int subject;
+        public int subject_index;
     }
 
 
     //for grid
     public int columns = 4; // Number of columns in your grid
-    public Image[] items; // Assign all your grid items in order
+    public GameObject[] items; // Assign all your grid items in order
     public RectTransform selector; // Visual indicator (like a highlight box)
 
     private int currentIndex = 0;
@@ -35,112 +39,188 @@ public class GridSelection : MonoBehaviour
 
     //public GameObject ContButton;
     public float wordspeed;
-   
+
+    //checking subject
+    public int subject;
+    public Image img;
+    public GameObject text;
+
+    private int cs1;
+    private int cs2;
+    private int cs3;
+    private int cs4;
+
+    private int current_subject_index;
+    
 
     void Start()
     {
-        
+        subject = PlayerPrefs.GetInt("current_boss");
+        cs1 = PlayerPrefs.GetInt("cs1_q");
+        cs2 = PlayerPrefs.GetInt("cs2_q");
+        cs3 = PlayerPrefs.GetInt("cs3_q");
+        cs4 = PlayerPrefs.GetInt("cs4_q");
+
+        switch (subject)//Find the subject the player is currently on and find the question they are currently on.
+        {
+            case 0:
+                current_subject_index = cs1;
+                break;
+            case 1:
+                current_subject_index = cs2;
+                break;
+            case 2:
+                current_subject_index = cs3;
+                break;
+            case 3:
+                current_subject_index = cs4;
+                break;
+            default:
+                break;
+        }
         UpdateSelectorPosition();
         QuestionBoxes = new QuestionData[]
    {
         new QuestionData {
             question = "Question 1: Which is an example of an int data type?",
             answers = new string[] { "car", "2.22", "1", "false" },
-            correct = 2
+            correct = 2,
+            subject = 0,
+            subject_index = 0
         },
         new QuestionData {
             question = "Question 1: A pointer is used to store an address in memory.",
             answers = new string[] { "True", "False", "", "" },
-            correct = 0
+            correct = 0,
+            subject = 1,
+            subject_index = 0
         },
          new QuestionData {
             question = "Question 1: A worst-case runtime of O(n*n) is faster than O(log n)?",
             answers = new string[] { "True", "False", "", "" },
-            correct = 0
+            correct = 0,
+            subject = 2,
+            subject_index = 0
         },
          new QuestionData {
             question = "Question 1: What is 2 + 2?",
             answers = new string[] { "3", "4", "1", "22" },
-            correct = 1
+            correct = 1,
+            subject = 3,
+            subject_index = 0
         },
           new QuestionData {
             question = "Question 2: Which of the following is NOT a control structure?",
             answers = new string[] { "Array", "For-Loop", "If-else", "While-loop"},
-            correct = 0
+            correct = 0,
+            subject = 0,
+            subject_index = 1
         },
         new QuestionData {
             question = "Question 2: What is the base case in a recursive function?",
             answers = new string[] { "3", "4", "5", "22" },
-            correct = 0
+            correct = 0,
+            subject = 1,
+            subject_index = 1
 
         },
          new QuestionData {
             question = "Question 2: What is 2 + 2?",
             answers = new string[] { "3", "4", "1", "22" },
-            correct = 0
+            correct = 0,
+            subject = 2,
+            subject_index = 1
 
         },
          new QuestionData {
             question = "Question 2: What is 2 + 2?",
             answers = new string[] { "3", "4", "1", "22" },
-            correct = 0
+            correct = 0,
+            subject = 3,
+            subject_index = 1
 
         },
           new QuestionData {
             question = "Question 3: Void functions are used to return values.",
             answers = new string[] { "True", "False", "", "" },
-            correct = 0
+            correct = 1,
+            subject = 0,
+            subject_index = 2
 
         },
         new QuestionData {
             question = "Question 3: What is 2 + 2?",
             answers = new string[] { "3", "4", "5", "22" },
-            correct = 0
+            correct = 0,
+            subject = 1,
+            subject_index = 2
 
         },
          new QuestionData {
             question = "Question 3: What is the runtime of Breadth-First-Search in terms of a graphs vertices and edges?",
             answers = new string[] { "O(V+E)", "O(V*V)", "O(V log(V))", "O((V+E)log(V))"},
-            correct = 0
+            correct = 0,
+            subject= 2,
+            subject_index = 2
 
         },
          new QuestionData {
             question = "Question 3: What is 2 + 2?",
             answers = new string[] { "3", "4", "1", "22" },
-            correct = 0
+            correct = 0,
+            subject = 3,
+            subject_index = 2
 
         },
           new QuestionData {
             question = "Question 4: What is 2 + 2?",
             answers = new string[] { "3", "4", "1", "22" },
-            correct = 0
+            correct = 0,
+            subject = 0,
+            subject_index = 3
 
         },
         new QuestionData {
             question = "Question 4: What is 2 + 2?",
             answers = new string[] { "3", "4", "5", "22" },
-            correct = 0
+            correct = 0,
+            subject = 1,
+            subject_index = 3
 
         },
          new QuestionData {
             question = "Question 4: What is 2 + 2?",
             answers = new string[] { "3", "4", "1", "22" },
-            correct = 0
+            correct = 0,
+            subject = 2,
+            subject_index = 3
 
         },
          new QuestionData {
             question = "Question 4: P = NP?",
             answers = new string[] { "True", "False", "", "" },
-            correct = 0
+            correct = 0,
+            subject = 3,
+            subject_index = 3
 
         },
 
    };
+
+
+
+
+        ReturnToGrid();
     }
 
     void Update()
     {
         HandleInput();
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("first_floor");
+        }
 
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -154,12 +234,26 @@ public class GridSelection : MonoBehaviour
             }
             else
             {
-                answers.SetActive(true);
-                selector.gameObject.SetActive(false);
-                whiteboard.SetActive(false);
-                titles.SetActive(false);
-                dialoguePanel.SetActive(true);
-                StartCoroutine(Typing());
+                //IF the question matches the players current subject AND they have not answered the question yet...then interact with the question
+                if (QuestionBoxes[currentIndex].subject == subject && !QuestionBoxes[currentIndex].answered)
+                {
+
+                    //Now...before the user can interact we need to make sure they aren't given access to a question they've already answered.
+                    //We need to give each question their own subject index,
+                    //Only the question that matches the index can be selected and answered.
+
+                    if (QuestionBoxes[currentIndex].subject_index == current_subject_index)
+                    {
+                        answers.SetActive(true);
+                        selector.gameObject.SetActive(false);
+                        whiteboard.SetActive(false);
+                        titles.SetActive(false);
+                        dialoguePanel.SetActive(true);
+                        StartCoroutine(Typing());
+                    }
+                    
+                }
+                
             }
 
         }
@@ -260,7 +354,36 @@ public class GridSelection : MonoBehaviour
         {
             Debug.Log("CORRECT");
             PlayerPrefs.SetInt("q", PlayerPrefs.GetInt("q") + 1);
+            QuestionBoxes[currentIndex].answered = true;
 
+            //NOw we also need to handle the input for our local playerprefs in this scene
+            //we need to increment the individual subjects so that questions cannot be re-answered upon exit and entrance back into the scene.
+            switch (subject)
+            {
+                //cs1
+                case 0:
+                    PlayerPrefs.SetInt("cs1_q", ++cs1);
+
+                    current_subject_index = cs1;
+                    break;
+                //cs2
+                case 1:
+                    PlayerPrefs.SetInt("cs2_q", ++cs2);
+                    current_subject_index = cs2;
+                    break;
+                //cs3
+                case 2:
+                    PlayerPrefs.SetInt("cs3_q", ++cs3);
+                    current_subject_index = cs3;
+                    break;
+                //cs4
+                case 3:
+                    PlayerPrefs.SetInt("cs4_q", ++cs4);
+                    current_subject_index = cs4;
+                    break;
+            }
+
+            //Now that we have incremented...we need to act on this information when giving the user the chance to pick a question.
         }
         else
         {
@@ -277,6 +400,29 @@ public class GridSelection : MonoBehaviour
 
         // Show the grid UI
         whiteboard.SetActive(true);
+
+        for(int i = 0; i < QuestionBoxes.Length; i++)
+        {
+            if (subject != QuestionBoxes[i].subject) //The player is currently not on this subject, so how should we display it?
+            {
+                text = items[i].transform.GetChild(0).gameObject;
+                text.SetActive(false);
+                img = items[i].GetComponent<Image>();
+                img.color = Color.black;
+            }
+            else if (QuestionBoxes[i].subject_index < current_subject_index)
+            {
+
+                //Make the text green
+                text = items[i].transform.GetChild(0).gameObject;
+                text.GetComponent<TMP_Text>().color = Color.green;
+            }//Also make a clause for the player is currently not on this question, so how should it be displayed. (maybe a less than greater then scenario, to display correctly answered q's
+            else
+            {
+
+            }
+        }
+
         titles.SetActive(true);
         selector.gameObject.SetActive(true);
 

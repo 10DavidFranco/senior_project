@@ -13,10 +13,15 @@ public class dietrich : MonoBehaviour
 
     public GameObject tennis_ball;
     public GameObject tb_spawn;
+
+    public battle_cam bc;
+    private bool dieonce;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        dieonce = false;
         StartCoroutine(firstphase());
+
     }
 
     // Update is called once per frame
@@ -244,11 +249,23 @@ public class dietrich : MonoBehaviour
 
     }
 
+    IEnumerator Die()
+    {
+        //Player wins!!!
+        bc.Pass();
+        yield return new WaitForSeconds(1.0f);
+        PlayerPrefs.SetInt("current_boss", 1);
+        SceneManager.LoadScene("first_floor");
+    }
+
     void checkDeath()
     {
-        if(health <= 0)
+        if(health <= 0 && !dieonce)
         {
-            SceneManager.LoadScene("first_floor");
+
+            dieonce = !dieonce;
+            StartCoroutine(Die());
+            
         }
     }
 }

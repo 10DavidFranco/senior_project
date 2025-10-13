@@ -1,10 +1,12 @@
 using UnityEngine;
+using System.Collections;
 
 public class camera : MonoBehaviour
 {
 
     public GameObject player;
     private bool colliding = false;
+    private bool plaque_switch;
 
     public bool colleft;
     public bool colright;
@@ -15,15 +17,18 @@ public class camera : MonoBehaviour
     public float rightbound;
     public float upbound;
     public float downbound;
-    
+
+    public GameObject plaque_prefab;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        colleft = false; 
-        colright = false; 
-        colup = false; 
+        colleft = false;
+        colright = false;
+        colup = false;
         coldown = false;
-
+        plaque_switch = false;
+        PlayerPrefs.SetInt("python", 1);
         //player = GameObject.Find("Player");
     }
 
@@ -36,7 +41,7 @@ public class camera : MonoBehaviour
         }
         else
         {
-            if(colleft && coldown || colleft && colup || coldown && colright) //if we are at the corner of the map, camera should not move. But we should still check for when we leave the area to restore control.
+            if (colleft && coldown || colleft && colup || coldown && colright) //if we are at the corner of the map, camera should not move. But we should still check for when we leave the area to restore control.
             {
                 //Debug.Log("Corner collision");
                 checkRight();
@@ -64,24 +69,29 @@ public class camera : MonoBehaviour
             //if a certain direction collision hastriggered, check player.transform.position.x or y value to see if it goes above threshold
             //to give cam control back to player.
 
-            
 
-            
+
+
 
             checkNoCollisions();
         }
-       
+
+
+        if(player.GetComponent<player_movement>().plaque_view == false && plaque_switch)
+        {
+            plaque_switch = !plaque_switch;
+        }
     }
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        colliding = true; //if we collide with camera boundaries, start checking which boundaries we collided with
+        colliding = true; //if we collide with camera boundaries, enable us to start checking which boundaries we collided with
         //Debug.Log("colliding");
     }
 
     void checkNoCollisions()
     {
-        if(!colleft && !colright && !colup && !coldown) //if no collisions are occurring on any axis, restore control to follow player freely
+        if (!colleft && !colright && !colup && !coldown) //if no collisions are occurring on any axis, restore control to follow player freely
         {
             //Debug.Log("Youre not colliding with anything!");
             colliding = false;
@@ -93,7 +103,7 @@ public class camera : MonoBehaviour
         if (colleft)
         {
 
-            transform.position = new Vector3(leftbound, player.transform.position.y, -6f); //execute the movement of the camera
+            transform.position = new Vector3(leftbound, player.transform.position.y, -6f); //execute the movement of the camera, stay constant with the left buondary of the map, but move vertically with the player
             checkLeft(); //make sure the camera does not go out of map boundaries
 
         }
@@ -104,7 +114,7 @@ public class camera : MonoBehaviour
         }
         if (colright)
         {
-            transform.position = new Vector3(rightbound, player.transform.position.y, -6f); 
+            transform.position = new Vector3(rightbound, player.transform.position.y, -6f);
             checkRight();
         }
         if (colup)
@@ -117,7 +127,12 @@ public class camera : MonoBehaviour
 
     void checkLeft()
     {
-        if (player.transform.position.x > leftbound) //If no longer colliding with wall, set direction collision to false
+        //These bounds are thresholds for the player!!!!!! they should be set to the halfway point of the camera when collidng with a wall to ensure a smooth detachment
+        //The blueon the left of the screen is not related to these bounds...
+
+
+        //No no no, these arrreeee thresholds for the camera, so we just need to reduce the left threshold so no outside area shows.
+        if (player.transform.position.x > leftbound) //If no longer colliding with wall, set that direction collision to false
         {
             colleft = false;
             //colliding = false;
@@ -150,5 +165,25 @@ public class camera : MonoBehaviour
             //colliding = false;
         }
     }
-  
+
+   
+
+    public void showPlaque()
+    {
+
+        if (!plaque_switch)
+        {
+            player.GetComponent<player_movement>().plaque_view = true;
+            StartCoroutine(spawnPlaque());
+            
+            plaque_switch = !plaque_switch;
+        }
+       
+    } 
+        
+    IEnumerator spawnPlaque()
+    {
+        yield return new WaitForSeconds(0.5f);
+        Instantiate(plaque_prefab, this.transform);
+    }
 }

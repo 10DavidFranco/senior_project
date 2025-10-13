@@ -6,7 +6,7 @@ public class player_movement : MonoBehaviour
     public Animator anim;
     public Rigidbody2D rb;
     public float move_speed;
-
+    public bool plaque_view;
     //public InteractionDetector interact;
 
     //to maintain the current direction the player is moving in.
@@ -15,14 +15,19 @@ public class player_movement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        plaque_view = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        checkH();
-        checkV();
+
+        if (!plaque_view)
+        {
+            checkH();
+            checkV();
+        }
+        
         //checkI();
         
     }

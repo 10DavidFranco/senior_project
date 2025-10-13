@@ -5,6 +5,8 @@ public class leftstairs : MonoBehaviour
 {
     
     private bool able_to_up = false;
+    public gameManager gm;
+
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -13,7 +15,12 @@ public class leftstairs : MonoBehaviour
 
         if(col.gameObject.layer == 10) // is the player next to me?
         {
-            able_to_up = true;
+
+            if (gm.upstairs_left)
+            {
+                able_to_up = true;
+            }
+            
         }
 
         
