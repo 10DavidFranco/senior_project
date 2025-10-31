@@ -22,7 +22,7 @@ public class gameManager : MonoBehaviour
     {
         questions = PlayerPrefs.GetInt("q"); //Will return 0 if no int value is found. Which is good for a new save/player.
         boss = PlayerPrefs.GetInt("current_boss"); //We only want to get values here, not set them or else we overwrite the player's progress.
-        Debug.Log(boss);
+        Debug.Log("This is your boss number: " + boss);
 
 
         switch (boss)
@@ -38,15 +38,25 @@ public class gameManager : MonoBehaviour
                 Destroy(halfway);
                 break;
             case 2:
+                cs1 = false;
                 cs2 = false;
                 upstairs_left = true;
+                upstairs_middle = false;
+                Destroy(halfway);
                 break;
             case 3:
-                upstairs_middle = true;
-                break;
-            case 4:
+                cs1 = false;
+                cs2 = false;
                 upstairs_left = true;
                 upstairs_middle = true;
+                Destroy(halfway);
+                break;
+            case 4:
+                cs1 = false;
+                cs2 = false;
+                upstairs_left = true;
+                upstairs_middle = true;
+                Destroy(halfway);
                 break;
 
             default:
@@ -55,7 +65,7 @@ public class gameManager : MonoBehaviour
 
 
         
-        //NEXT THING TO DO! Every gameobject that relies on the player's progress should read these variables on start!!!!
+        //NEXT THING TO DO! Every gameobject that relies on the player's progress should read these variables on start!!!! NOT ON START!!! ON INTERACTION...what was I thinking....
         //And then behave accordingly!!! (Camera boundaries, boss fights, TAlab, CSlab)
     }
 

@@ -84,49 +84,49 @@ public class GridSelection : MonoBehaviour
         new QuestionData {
             question = "Question 1: Which is an example of an int data type?",
             answers = new string[] { "car", "2.22", "1", "false" },
-            correct = 2,
-            subject = 0,
+            correct = 2, //index of correct answer
+            subject = 0, //cs1
             subject_index = 0
         },
         new QuestionData {
             question = "Question 1: A pointer is used to store an address in memory.",
             answers = new string[] { "True", "False", "", "" },
             correct = 0,
-            subject = 1,
+            subject = 1, //cs2
             subject_index = 0
         },
          new QuestionData {
-            question = "Question 1: A worst-case runtime of O(n*n) is faster than O(log n)?",
+            question = "Question 1: A runtime of O(n*n) is faster than O(log n)?",
             answers = new string[] { "True", "False", "", "" },
             correct = 0,
-            subject = 2,
+            subject = 2, //dsa
             subject_index = 0
         },
          new QuestionData {
             question = "Question 1: What is 2 + 2?",
             answers = new string[] { "3", "4", "1", "22" },
             correct = 1,
-            subject = 3,
+            subject = 3, //automata
             subject_index = 0
         },
           new QuestionData {
             question = "Question 2: Which of the following is NOT a control structure?",
-            answers = new string[] { "Array", "For-Loop", "If-else", "While-loop"},
+            answers = new string[] { "Array", "For loop", "If-else", "While loop"},
             correct = 0,
             subject = 0,
             subject_index = 1
         },
         new QuestionData {
             question = "Question 2: What is the base case in a recursive function?",
-            answers = new string[] { "3", "4", "5", "22" },
-            correct = 0,
+            answers = new string[] { "Where the function loops forever", "Where the function no longer relies on arguments", "Where the function calls itself", "Where the function stops calling itself" },
+            correct = 3,
             subject = 1,
             subject_index = 1
 
         },
          new QuestionData {
-            question = "Question 2: What is 2 + 2?",
-            answers = new string[] { "3", "4", "1", "22" },
+            question = "Question 2: What is the runtime of Breadth-First-Search in terms of a graphs vertices and edges?",
+            answers = new string[] { "O(V+E)", "O(V*V)", "O(V log(V))", "O((V+E)log(V))" },
             correct = 0,
             subject = 2,
             subject_index = 1
@@ -149,16 +149,16 @@ public class GridSelection : MonoBehaviour
 
         },
         new QuestionData {
-            question = "Question 3: What is 2 + 2?",
-            answers = new string[] { "3", "4", "5", "22" },
-            correct = 0,
+            question = "Question 3: What is a doubly linked list?",
+            answers = new string[] { "A linked list that refers to a separate array for storage", "A linked list whose nodes point to the previous and next node", "Two linked lists. Their data keeps track of the other.", "None of the above." },
+            correct = 1,
             subject = 1,
             subject_index = 2
 
         },
          new QuestionData {
-            question = "Question 3: What is the runtime of Breadth-First-Search in terms of a graphs vertices and edges?",
-            answers = new string[] { "O(V+E)", "O(V*V)", "O(V log(V))", "O((V+E)log(V))"},
+            question = "Question 3: What is dynamic programming? (If you don't know this, it is extremely worth looking into.)",
+            answers = new string[] { "Storing and referring to answers we've already found", "Implementing pointers and heap memory into your solution", "Increasing efficiency using your computer's cache", "Overclocking your computer to run programs more effectively"},
             correct = 0,
             subject= 2,
             subject_index = 2
@@ -173,25 +173,25 @@ public class GridSelection : MonoBehaviour
 
         },
           new QuestionData {
-            question = "Question 4: What is 2 + 2?",
-            answers = new string[] { "3", "4", "1", "22" },
-            correct = 0,
+            question = "Question 4: What portion of a class is used to initialize newly created objects?",
+            answers = new string[] { "Initializer", "Instantiater", "Creator", "Constructor" },
+            correct = 3,
             subject = 0,
             subject_index = 3
 
         },
         new QuestionData {
-            question = "Question 4: What is 2 + 2?",
-            answers = new string[] { "3", "4", "5", "22" },
+            question = "Question 4: What is a leaf in terms of a tree data structure.",
+            answers = new string[] { "A node with no children", "A node with no parent", "A node with no data", "A node whose child connects back to the root node" },
             correct = 0,
             subject = 1,
             subject_index = 3
 
         },
          new QuestionData {
-            question = "Question 4: What is 2 + 2?",
-            answers = new string[] { "3", "4", "1", "22" },
-            correct = 0,
+            question = "Question 4: Bubble sort?",
+            answers = new string[] { "YESSS!", "Eww Eww Ewwww!", "It's fine.", "What? Bubbles? Isn't this CS?" },
+            correct = 1,
             subject = 2,
             subject_index = 3
 

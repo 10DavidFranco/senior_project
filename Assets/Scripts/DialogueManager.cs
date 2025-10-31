@@ -7,6 +7,8 @@ public class DialogueManager : MonoBehaviour
 {
     public GameObject dialoguePanel;
     public TextMeshProUGUI dialogueText;
+    public GameObject namePanel;
+    public TextMeshProUGUI nameText;
     public Image npcPortrait;
     public Button continueButton;
     public float wordSpeed = 0.03f;
@@ -24,11 +26,12 @@ public class DialogueManager : MonoBehaviour
         else
             Destroy(gameObject);
 
+        namePanel.SetActive(false);
         dialoguePanel.SetActive(false);
         continueButton.gameObject.SetActive(false);
     }
 
-    public void StartDialogue(string[] dialogueLines, Sprite portrait)
+    public void StartDialogue(string[] dialogueLines, Sprite portrait, string name)
     {
         if (typingCoroutine != null)
             StopCoroutine(typingCoroutine);
@@ -38,6 +41,8 @@ public class DialogueManager : MonoBehaviour
         index = 0;
         dialogueText.text = "";
         dialoguePanel.SetActive(true);
+        namePanel.SetActive(true);
+        nameText.text = name;
         continueButton.gameObject.SetActive(false);
 
         typingCoroutine = StartCoroutine(TypeLine());
@@ -73,7 +78,9 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         dialoguePanel.SetActive(false);
+        namePanel.SetActive(false);
         dialogueText.text = "";
+        nameText.text = "";
         currentDialogue = null;
     }
 }

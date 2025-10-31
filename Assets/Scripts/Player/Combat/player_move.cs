@@ -62,7 +62,7 @@ public class player_move : MonoBehaviour
             Debug.Log("jumping");
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
             isGrounded = false;
-            animator.SetBool("isJumping", !isGrounded);
+            //animator.SetBool("isJumping", !isGrounded);
 
         }
 
@@ -151,7 +151,7 @@ public class player_move : MonoBehaviour
     public void Jumping()
     {
         isGrounded = true;
-        animator.SetBool("isJumping", !isGrounded);
+        //animator.SetBool("isJumping", !isGrounded);
     }
 
 
@@ -209,7 +209,15 @@ public class player_move : MonoBehaviour
     {
         bc.Fail();
         yield return new WaitForSeconds(1.0f);
-        SceneManager.LoadScene("first_floor");
+        if(PlayerPrefs.GetInt("current_boss") <= 1)
+        {
+            SceneManager.LoadScene("first_floor");
+        }
+        else
+        {
+            SceneManager.LoadScene("second_floor");
+        }
+        
     }
 
 

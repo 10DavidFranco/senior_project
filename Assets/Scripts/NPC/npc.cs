@@ -13,7 +13,7 @@ public class NPC : MonoBehaviour
     {
         if (playerIsClose && Input.GetKeyDown(KeyCode.E))
         {
-            DialogueManager.Instance.StartDialogue(dialogueLines, portrait);
+            DialogueManager.Instance.StartDialogue(dialogueLines, portrait, npcName);
         }
     }
 

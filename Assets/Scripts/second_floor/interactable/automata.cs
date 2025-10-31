@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class automata : MonoBehaviour
 {
     private bool able_to_enter = false;
+    public gameManagersecondfloor gm;
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -12,7 +13,11 @@ public class automata : MonoBehaviour
 
         if (col.gameObject.layer == 10) // is the player next to me?
         {
-            able_to_enter = true;
+            if (gm.cs4)
+            {
+                able_to_enter = true;
+            }
+            
         }
 
 

@@ -801,11 +801,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5616284049753187248, guid: 9bb40886f8a67534ea58461a233f6544, type: 3}
       propertyPath: 'dialogueLines.Array.data[0]'
-      value: just checking at this point
+      value: I like to solve 5 leetcode questions an hour.
       objectReference: {fileID: 0}
     - target: {fileID: 5616284049753187248, guid: 9bb40886f8a67534ea58461a233f6544, type: 3}
       propertyPath: 'dialogueLines.Array.data[1]'
-      value: 'does this even work '
+      value: Every morning I build a game engine from scratch.
       objectReference: {fileID: 0}
     - target: {fileID: 8121912124833231412, guid: 9bb40886f8a67534ea58461a233f6544, type: 3}
       propertyPath: m_Name
@@ -7558,6 +7558,22 @@ Transform:
   - {fileID: 594853103}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1238646506 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3237997056999524720, guid: 4d1d876e1e51b3b4299c65754972b3c3, type: 3}
+  m_PrefabInstance: {fileID: 1705839476}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1238646508 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3320854675712830962, guid: 4d1d876e1e51b3b4299c65754972b3c3, type: 3}
+  m_PrefabInstance: {fileID: 1705839476}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238646506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1245931807
 GameObject:
   m_ObjectHideFlags: 0
@@ -7624,6 +7640,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 1742478947}
   dialogueText: {fileID: 528388368}
+  namePanel: {fileID: 1238646506}
+  nameText: {fileID: 1238646508}
   npcPortrait: {fileID: 650619388}
   continueButton: {fileID: 310763139}
   wordSpeed: 0.03
@@ -26443,19 +26461,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6435717621171092247, guid: d5a85b7a4f30a7f44b15f09e577beaa9, type: 3}
       propertyPath: npcName
-      value: dummy_#
+      value: Lost student
       objectReference: {fileID: 0}
     - target: {fileID: 6435717621171092247, guid: d5a85b7a4f30a7f44b15f09e577beaa9, type: 3}
       propertyPath: portrait
       value: 
-      objectReference: {fileID: 21300000, guid: 915a38f3761cee440b5a6f2e67d5b9df, type: 3}
+      objectReference: {fileID: -1722149538185002443, guid: d29aa7bfd656ee34889888a1931c016f, type: 3}
     - target: {fileID: 6435717621171092247, guid: d5a85b7a4f30a7f44b15f09e577beaa9, type: 3}
       propertyPath: dialogueLines.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6435717621171092247, guid: d5a85b7a4f30a7f44b15f09e577beaa9, type: 3}
       propertyPath: 'dialogueLines.Array.data[0]'
-      value: fuck?
+      value: Why isn't my homework compiling?
       objectReference: {fileID: 0}
     - target: {fileID: 9104400974340336000, guid: d5a85b7a4f30a7f44b15f09e577beaa9, type: 3}
       propertyPath: m_LocalPosition.x
