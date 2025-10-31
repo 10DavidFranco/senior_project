@@ -41,6 +41,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/final_boss.unity
     guid: caf36b1701f38d14f8d5f19da003be52
+  - enabled: 1
+    path: Assets/Scenes/character_select.unity
+    guid: 2d7912e038966714ca73089c451b4071
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

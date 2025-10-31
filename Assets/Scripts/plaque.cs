@@ -57,6 +57,8 @@ public class plaque : MonoBehaviour
                 break;
                 
         }
+
+        
     }
 
     // Update is called once per frame
@@ -207,7 +209,8 @@ public class plaque : MonoBehaviour
         Debug.Log(GameObject.Find("Player(Clone)").name);
         player = GameObject.Find("Player(Clone)");
         Debug.Log(player.GetComponent<player_movement>().plaque_view);
-        player.GetComponent<player_movement>().plaque_view = false;
+        player.transform.GetChild(0).gameObject.GetComponent<InteractionDetector>().SetPlaqueViewOff();
+        //get interaction detector, start coroutine to set plaque view to false to void race condition.
         Debug.Log(player.GetComponent<player_movement>().plaque_view);
         StartCoroutine(Destroy());
        

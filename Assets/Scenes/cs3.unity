@@ -518,6 +518,7 @@ MonoBehaviour:
   schweller: {fileID: 1428863516}
   stanley: {fileID: 21496740}
   player: {fileID: 734273486}
+  pm: {fileID: 0}
 --- !u!1 &532352386
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,7 +1013,7 @@ GameObject:
   - component: {fileID: 1428863521}
   m_Layer: 0
   m_Name: schweller
-  m_TagString: Untagged
+  m_TagString: bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

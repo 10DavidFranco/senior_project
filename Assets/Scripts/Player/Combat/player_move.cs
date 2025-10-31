@@ -43,7 +43,10 @@ public class player_move : MonoBehaviour
         trailRenderer = GetComponent<TrailRenderer>();
         hittable = true;
         isAiming = false;
+        DecideSkin();
     }
+
+    
 
     // Update is called once per frame
     void Update()
@@ -62,7 +65,7 @@ public class player_move : MonoBehaviour
             Debug.Log("jumping");
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
             isGrounded = false;
-            //animator.SetBool("isJumping", !isGrounded);
+            animator.SetBool("isJumping", !isGrounded);
 
         }
 
@@ -96,6 +99,18 @@ public class player_move : MonoBehaviour
 
         animator.SetFloat("xVelocity", math.abs(rb.linearVelocity.x));
         animator.SetFloat("yVelocity", rb.linearVelocity.y);
+
+        if(isGrounded && horizontalInput != 0f && !isAiming)
+        {
+            animator.SetBool("isRunning", true);
+        }else if(isGrounded && horizontalInput == 0f || isAiming)
+        {
+            animator.SetBool("isRunning", false);
+        }
+        else
+        {
+
+        }
     }
 
     public IEnumerator Dash()
@@ -151,9 +166,20 @@ public class player_move : MonoBehaviour
     public void Jumping()
     {
         isGrounded = true;
-        //animator.SetBool("isJumping", !isGrounded);
+        animator.SetBool("isJumping", !isGrounded);
     }
 
+    public void DecideSkin()
+    {
+        if(PlayerPrefs.GetInt("player_skin") == 1)
+        {
+            animator.SetInteger("skin", 1);
+        }
+        else if (PlayerPrefs.GetInt("player_skin") == 2)
+        {
+            animator.SetInteger("skin", 2);
+        }
+    }
 
     
     
@@ -176,7 +202,7 @@ public class player_move : MonoBehaviour
             if (other.gameObject.CompareTag("bullet"))
             {
                 Debug.Log("Player has been hit!!!");
-
+                animator.SetBool("isHurt", true);
                 health--;
                 hittable = false;
                 Debug.Log(health);
@@ -192,6 +218,7 @@ public class player_move : MonoBehaviour
     {
         yield return new WaitForSeconds(iduration);
         hittable = true;
+        animator.SetBool("isHurt", false);
     }
 
     private void checkDeath()
