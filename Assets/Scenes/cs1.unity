@@ -1283,12 +1283,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1114471056720971939, guid: 0a857fcaaa74ae04189c3a23137abed7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0046
+      objectReference: {fileID: 0}
+    - target: {fileID: 3993900239942628706, guid: 0a857fcaaa74ae04189c3a23137abed7, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].time
+      value: 0.020446777
+      objectReference: {fileID: 0}
+    - target: {fileID: 3993900239942628706, guid: 0a857fcaaa74ae04189c3a23137abed7, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
+      value: 0.50104904
+      objectReference: {fileID: 0}
+    - target: {fileID: 6565340072369597396, guid: 0a857fcaaa74ae04189c3a23137abed7, type: 3}
+      propertyPath: currentMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7038986887463365548, guid: 0a857fcaaa74ae04189c3a23137abed7, type: 3}
       propertyPath: bc
       value: 
       objectReference: {fileID: 78850211}
     - target: {fileID: 8477098568643522361, guid: 0a857fcaaa74ae04189c3a23137abed7, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8477098568643522361, guid: 0a857fcaaa74ae04189c3a23137abed7, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []

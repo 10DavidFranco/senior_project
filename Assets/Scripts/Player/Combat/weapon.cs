@@ -18,7 +18,9 @@ public class weapon : MonoBehaviour
     public enum FireMode
     {
         SingleShot,
-        Shotgun
+        Shotgun,
+        Boomerang,
+        lob
     }
     public FireMode currentMode;
 
@@ -117,6 +119,12 @@ public class weapon : MonoBehaviour
             case FireMode.Shotgun:
                 Shotgun();
                 break;
+            case FireMode.Boomerang:
+                Boomerang();
+                break;
+            case FireMode.lob:
+                Lob();
+                break;
         }
     }
 
@@ -175,4 +183,31 @@ public class weapon : MonoBehaviour
 
         }
     }
+    void Boomerang()
+    {
+        Vector3 dir = new Vector3(xdirection, ydirection, 0f).normalized;
+
+        GameObject new_b = Instantiate(bulletPrefab,firepoint.position + dir * 1.5f,Quaternion.identity );
+
+        var bullet = new_b.GetComponent<player_bullet>();
+        bullet.bulletSprites = bulletSprites;
+        bullet.isBoomerang = true; // tell the bullet to come back
+
+        bullet.Shoot(dir);
+    }
+    void Lob()
+    {
+        Vector3 dir = new Vector3(xdirection, ydirection, 0f).normalized;
+
+        GameObject new_b = Instantiate(bulletPrefab, firepoint.position + dir * 1.5f, Quaternion.identity);
+
+        var bullet = new_b.GetComponent<player_bullet>();
+        bullet.bulletSprites = bulletSprites;
+        bullet.isLob = true; // tell the bullet to lob back
+
+        bullet.Shoot(dir);
+    }
+
+
+
 }

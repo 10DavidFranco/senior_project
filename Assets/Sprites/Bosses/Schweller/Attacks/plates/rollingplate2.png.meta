@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      rollingplate2_0: -1924657787703932316
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

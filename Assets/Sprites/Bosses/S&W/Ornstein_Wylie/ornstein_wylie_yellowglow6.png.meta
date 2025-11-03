@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ornstein_wylie_yellowglow6_0: 2523957403733862247
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

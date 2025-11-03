@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      police_car_driving3_0: -7615624802331202284
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

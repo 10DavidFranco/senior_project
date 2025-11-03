@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      schweller_intro22_0: 4272538574364350506
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

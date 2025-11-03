@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sp_ahh_schweller_redpunch1_0: -4799690357634098335
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

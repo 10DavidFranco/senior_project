@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sp_ahh_wylie_realtm_pencilstab3_0: 1983512123377415831
+      sp_ahh_wylie_realtm_pencilstab3_1: -1859526788856849764
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

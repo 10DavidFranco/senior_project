@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      schweller_intro_fade5_0: 1922248597468209591
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
