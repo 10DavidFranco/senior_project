@@ -66,7 +66,17 @@ public class selector : MonoBehaviour
         switch (current_pos)
         {
             case 0:
-                SceneManager.LoadScene("first_floor");
+                //Add if condition to check if player has already selected a player previously!!!!
+                //0 should be no player has been selected, any value greater means a skin has already been set.
+                if(PlayerPrefs.GetInt("player_skin") == 0)
+                {
+                    SceneManager.LoadScene("character_select");
+                }
+                else
+                {
+                    SceneManager.LoadScene("first_floor");
+                }
+                
                 break;
             case 1:
                 SceneManager.LoadScene("bonus_bosses");

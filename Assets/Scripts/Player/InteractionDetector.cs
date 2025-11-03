@@ -1,9 +1,11 @@
 using UnityEngine;
+using System.Collections;
 
 public class InteractionDetector : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public GameObject interactionIcon;
+    public player_movement pm;
     
 
 
@@ -30,4 +32,20 @@ public class InteractionDetector : MonoBehaviour
         
         interactionIcon.SetActive(false); //they left? stop showing it.
     }
+
+    public void SetPlaqueViewOff()
+    {
+        Debug.Log("Setting plaque view!");
+        StartCoroutine(TurnOffView());
+        pm = this.transform.parent.gameObject.GetComponent<player_movement>();
+        Debug.Log(pm.plaque_view);
+    }
+
+    IEnumerator TurnOffView()
+    {
+        yield return new WaitForSeconds(1.0f);
+        pm.plaque_view = false;
+    }
+
+
 }

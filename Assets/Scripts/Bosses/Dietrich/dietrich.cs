@@ -4,7 +4,7 @@ using System.Collections;
 
 public class dietrich : MonoBehaviour
 {
-    public int health = 24;
+    public int health;
     public littlefunction lf;
     public Animator anim;
     public f_spawn spawn;
@@ -37,18 +37,23 @@ public class dietrich : MonoBehaviour
     IEnumerator firstphase()
     {
 
-        while(health > 25)
+        while(health > 60)
         {
             DeclareFunc();
             yield return new WaitForSeconds(3.0f);
             
-            /*AnimCall();
+            AnimCall();
             yield return new WaitForSeconds(3.0f);
             
+            
+        }
+
+        while(health > 30)
+        {
             LittleFunc(true);
             yield return new WaitForSeconds(2.0f);
             LittleFunc(false);
-            yield return new WaitForSeconds(2.0f);*/
+            yield return new WaitForSeconds(2.0f); 
         }
 
 

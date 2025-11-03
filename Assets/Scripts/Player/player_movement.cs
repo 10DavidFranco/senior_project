@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class player_movement : MonoBehaviour
 {
@@ -26,10 +27,24 @@ public class player_movement : MonoBehaviour
         {
             checkH();
             checkV();
+            checkEscape();
         }
         
         //checkI();
         
+
+        
+    }
+
+    private void checkEscape()
+    {
+        //Eventually, put an "Are you Sure you want to exit screen."
+        //but for now...
+        if (Input.GetButton("Cancel") && plaque_view == false)
+        {
+            Debug.Log("plaque view was: " + plaque_view);
+            SceneManager.LoadScene("start_menu");
+        }
     }
 
     /*private void checkI()

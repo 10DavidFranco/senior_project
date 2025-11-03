@@ -14,7 +14,7 @@ public class middlestairs : MonoBehaviour
 
         if (col.gameObject.layer == 10) // is it the player that is next to me?
         {
-            if (gm.upstairs_left)
+            if (gm.upstairs_middle)
             {
                 able_to_up = true;
             }
