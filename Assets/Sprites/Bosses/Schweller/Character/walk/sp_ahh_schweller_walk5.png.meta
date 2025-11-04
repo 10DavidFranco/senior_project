@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sp_ahh_schweller_walk5_0: 8562217698370352380
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

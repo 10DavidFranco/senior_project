@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      smough_schweller_swing3_0: 2242585339456095390
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

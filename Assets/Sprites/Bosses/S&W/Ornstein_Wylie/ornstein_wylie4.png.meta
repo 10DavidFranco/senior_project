@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ornstein_wylie4_0: 1188673246759555192
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

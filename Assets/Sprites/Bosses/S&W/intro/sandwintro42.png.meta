@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sandwintro42_0: -2127681509491861000
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
