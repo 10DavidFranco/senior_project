@@ -29,6 +29,8 @@ public class player_bullet : MonoBehaviour
     {
         if (isLob)
         {
+            //
+            
             // Enable gravity for arc shot
             rb.bodyType = RigidbodyType2D.Dynamic;
             rb.gravityScale = 2f;

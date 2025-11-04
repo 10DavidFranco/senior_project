@@ -7,14 +7,23 @@ public class weapon : MonoBehaviour
     private GameObject new_b;
     public player_move pm;
 
-    public Sprite[] bulletSprites;
+    public Sprite[] singleShotSprites;
 
     private float xdirection;
     private float ydirection;
     //Animator animator;
     //AudioSource AudioSource;
 
-    // controll the firing mode 
+    // controll the firing mode
+    // 
+
+    [Header("Bullet Colors")]
+    private Color singleShotColor = Color.gray;
+    private Color shotgunColor = Color.magenta;
+    private Color boomerangColor = Color.cyan;
+    private Color lobColor = Color.red;
+
+
     public enum FireMode
     {
         SingleShot,
@@ -133,7 +142,9 @@ public class weapon : MonoBehaviour
     {
         new_b = Instantiate(bulletPrefab, firepoint.position + new Vector3(xdirection * 1.5f, ydirection* 1.5f, -2f), firepoint.rotation); //spawning just outside of player sprite
         var bullet = new_b.GetComponent<player_bullet>();
-        bullet.bulletSprites = bulletSprites;
+        bullet.bulletSprites = singleShotSprites;
+
+        new_b.GetComponent<SpriteRenderer>().color = singleShotColor;
 
         // fire it
         bullet.Shoot(new Vector3(xdirection, ydirection, -2f).normalized);
@@ -171,9 +182,11 @@ public class weapon : MonoBehaviour
 
           
             var bullet = new_bullet.GetComponent<player_bullet>();
-            bullet.bulletSprites = bulletSprites;
+            bullet.bulletSprites = singleShotSprites;
 
-           
+
+            new_bullet.GetComponent<SpriteRenderer>().color = shotgunColor;
+
             // Fire it in its rotated direction
             bullet.Shoot(rotatedDir);
 
@@ -190,8 +203,10 @@ public class weapon : MonoBehaviour
         GameObject new_b = Instantiate(bulletPrefab,firepoint.position + dir * 1.5f,Quaternion.identity );
 
         var bullet = new_b.GetComponent<player_bullet>();
-        bullet.bulletSprites = bulletSprites;
+        bullet.bulletSprites = singleShotSprites;
         bullet.isBoomerang = true; // tell the bullet to come back
+
+        new_b.GetComponent<SpriteRenderer>().color = boomerangColor;
 
         bullet.Shoot(dir);
     }
@@ -202,8 +217,11 @@ public class weapon : MonoBehaviour
         GameObject new_b = Instantiate(bulletPrefab, firepoint.position + dir * 1.5f, Quaternion.identity);
 
         var bullet = new_b.GetComponent<player_bullet>();
-        bullet.bulletSprites = bulletSprites;
+        bullet.bulletSprites = singleShotSprites;
         bullet.isLob = true; // tell the bullet to lob back
+
+
+        new_b.GetComponent<SpriteRenderer>().color = lobColor;
 
         bullet.Shoot(dir);
     }
