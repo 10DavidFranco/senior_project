@@ -71,13 +71,13 @@ public class cursor : MonoBehaviour
         switch (current_pos)
         {
             case 0:
-                //SceneManager.LoadScene("first_floor");
+                SceneManager.LoadScene("ramos");
                 break;
             case 1:
-                //SceneManager.LoadScene("bonus_bosses");
+                SceneManager.LoadScene("erik");
                 break;
             case 2:
-                //Debug.Log("OPTIONS MENU");
+                SceneManager.LoadScene("s&w");
                 break;
             default:
                 break;

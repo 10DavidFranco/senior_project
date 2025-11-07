@@ -44,6 +44,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/character_select.unity
     guid: 2d7912e038966714ca73089c451b4071
+  - enabled: 1
+    path: Assets/Scenes/ramos.unity
+    guid: 323fe6e508b7d0d43a9685f33eab965d
+  - enabled: 1
+    path: Assets/Scenes/erik.unity
+    guid: 472b62606c0f6554ab965abe21bf2fc1
+  - enabled: 1
+    path: Assets/Scenes/s&w.unity
+    guid: fd489ad1a9a0a3d45a042d973079a2e6
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

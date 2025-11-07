@@ -31,7 +31,7 @@ public class weapon : MonoBehaviour
         Boomerang,
         lob
     }
-    public FireMode currentMode;
+    private FireMode currentMode;
 
 
 
@@ -41,6 +41,7 @@ public class weapon : MonoBehaviour
 
         xdirection = 1f;
         ydirection = 0f;
+        SetFireMode();
         //animator = GetComponent<Animator>();
        // AudioSource = GetComponent<AudioSource>();
     }
@@ -112,6 +113,27 @@ public class weapon : MonoBehaviour
 
         
        
+    }
+
+    public void SetFireMode()
+    {
+        switch (PlayerPrefs.GetInt("weapon_lang"))
+        {
+            case 0: //python
+                currentMode = FireMode.SingleShot;
+                break;
+            case 1: //javascript
+                currentMode = FireMode.lob;
+                break;
+            case 2: //c++
+                currentMode = FireMode.Boomerang;
+                break;
+            case 3: //assembly
+                currentMode = FireMode.Shotgun;
+                break;
+            default:
+                break;
+        } 
     }
 
 

@@ -180,7 +180,7 @@ public class plaque : MonoBehaviour
             default:
                 break;
         }//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+        Debug.Log("You picked language: " + index);
         //Whatever index is currently on, set current_lang to that value...
         switch (boss)
         {
