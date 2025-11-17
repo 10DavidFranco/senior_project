@@ -775,6 +775,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4156218423794058620, guid: 9bb40886f8a67534ea58461a233f6544, type: 3}
+      propertyPath: m_Size.x
+      value: 0.49186075
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156218423794058620, guid: 9bb40886f8a67534ea58461a233f6544, type: 3}
+      propertyPath: m_Size.y
+      value: 0.63200355
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156218423794058620, guid: 9bb40886f8a67534ea58461a233f6544, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156218423794058620, guid: 9bb40886f8a67534ea58461a233f6544, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0034170449
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156218423794058620, guid: 9bb40886f8a67534ea58461a233f6544, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.016119376
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156218423794058620, guid: 9bb40886f8a67534ea58461a233f6544, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.39583334
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156218423794058620, guid: 9bb40886f8a67534ea58461a233f6544, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.5416667
+      objectReference: {fileID: 0}
     - target: {fileID: 5616284049753187248, guid: 9bb40886f8a67534ea58461a233f6544, type: 3}
       propertyPath: npcName
       value: Schweller
@@ -811,9 +839,21 @@ PrefabInstance:
       propertyPath: 'dialogueLines.Array.data[1]'
       value: Every morning I build a game engine from scratch.
       objectReference: {fileID: 0}
+    - target: {fileID: 5844606786804441133, guid: 9bb40886f8a67534ea58461a233f6544, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 934631440213120496, guid: 55724c95e87900c4f8e4f66877a4dfd3, type: 3}
     - target: {fileID: 8121912124833231412, guid: 9bb40886f8a67534ea58461a233f6544, type: 3}
       propertyPath: m_Name
       value: schweller_dummy 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8283686796228607638, guid: 9bb40886f8a67534ea58461a233f6544, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8283686796228607638, guid: 9bb40886f8a67534ea58461a233f6544, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8283686796228607638, guid: 9bb40886f8a67534ea58461a233f6544, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6297,6 +6337,18 @@ PrefabInstance:
       propertyPath: 'dialogueLines.Array.data[1]'
       value: yea
       objectReference: {fileID: 0}
+    - target: {fileID: 3401212506694428239, guid: eb04b7449cc3bf848a6265da0767738f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1699292704958380921, guid: 942b2c39bead4404f91a40fddf9de39e, type: 3}
+    - target: {fileID: 4467840433685632249, guid: eb04b7449cc3bf848a6265da0767738f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4467840433685632249, guid: eb04b7449cc3bf848a6265da0767738f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4467840433685632249, guid: eb04b7449cc3bf848a6265da0767738f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 74.46
@@ -6340,6 +6392,38 @@ PrefabInstance:
     - target: {fileID: 6959366427524882255, guid: eb04b7449cc3bf848a6265da0767738f, type: 3}
       propertyPath: m_Name
       value: dummy3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061748255635691454, guid: eb04b7449cc3bf848a6265da0767738f, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5672397
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061748255635691454, guid: eb04b7449cc3bf848a6265da0767738f, type: 3}
+      propertyPath: m_Size.y
+      value: 0.61392856
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061748255635691454, guid: eb04b7449cc3bf848a6265da0767738f, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0055562556
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061748255635691454, guid: eb04b7449cc3bf848a6265da0767738f, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.0009661615
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061748255635691454, guid: eb04b7449cc3bf848a6265da0767738f, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061748255635691454, guid: eb04b7449cc3bf848a6265da0767738f, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061748255635691454, guid: eb04b7449cc3bf848a6265da0767738f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.39583334
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061748255635691454, guid: eb04b7449cc3bf848a6265da0767738f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.5416667
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26621,6 +26705,46 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 227161096994058241, guid: d5a85b7a4f30a7f44b15f09e577beaa9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6029174376815210619, guid: 107f75714e759854d85a640bc56862c9, type: 3}
+    - target: {fileID: 2867975878288996957, guid: d5a85b7a4f30a7f44b15f09e577beaa9, type: 3}
+      propertyPath: m_Size.x
+      value: 0.49813646
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867975878288996957, guid: d5a85b7a4f30a7f44b15f09e577beaa9, type: 3}
+      propertyPath: m_Size.y
+      value: 0.61861145
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867975878288996957, guid: d5a85b7a4f30a7f44b15f09e577beaa9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867975878288996957, guid: d5a85b7a4f30a7f44b15f09e577beaa9, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0073875487
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867975878288996957, guid: d5a85b7a4f30a7f44b15f09e577beaa9, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.01691626
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867975878288996957, guid: d5a85b7a4f30a7f44b15f09e577beaa9, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867975878288996957, guid: d5a85b7a4f30a7f44b15f09e577beaa9, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867975878288996957, guid: d5a85b7a4f30a7f44b15f09e577beaa9, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.39583334
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867975878288996957, guid: d5a85b7a4f30a7f44b15f09e577beaa9, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.5208333
+      objectReference: {fileID: 0}
     - target: {fileID: 6435717621171092247, guid: d5a85b7a4f30a7f44b15f09e577beaa9, type: 3}
       propertyPath: npcName
       value: Lost student
@@ -26640,6 +26764,14 @@ PrefabInstance:
     - target: {fileID: 6435717621171092247, guid: d5a85b7a4f30a7f44b15f09e577beaa9, type: 3}
       propertyPath: 'dialogueLines.Array.data[0]'
       value: Why isn't my homework compiling?
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104400974340336000, guid: d5a85b7a4f30a7f44b15f09e577beaa9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104400974340336000, guid: d5a85b7a4f30a7f44b15f09e577beaa9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9104400974340336000, guid: d5a85b7a4f30a7f44b15f09e577beaa9, type: 3}
       propertyPath: m_LocalPosition.x
