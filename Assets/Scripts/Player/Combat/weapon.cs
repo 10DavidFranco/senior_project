@@ -31,7 +31,7 @@ public class weapon : MonoBehaviour
         Boomerang,
         lob
     }
-    public FireMode currentMode;
+    private FireMode currentMode;
 
 
 

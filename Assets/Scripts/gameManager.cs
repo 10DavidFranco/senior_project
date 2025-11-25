@@ -21,11 +21,11 @@ public class gameManager : MonoBehaviour
     //public GameObject plaque;
     //public Image cs1_p;
     //public Image cs2_p;
+
     [Header("Quest System")] public bool upstairs_right;
     public List<QuestSO> allQuests = new();
     public List<QuestSO> activeQuests = new();
     public List<QuestSO> completedQuests = new();
-
 
 
 
@@ -109,6 +109,7 @@ public class gameManager : MonoBehaviour
         //NEXT THING TO DO! Every gameobject that relies on the player's progress should read these variables on start!!!! NOT ON START!!! ON INTERACTION...what was I thinking....
         //And then behave accordingly!!! (Camera boundaries, boss fights, TAlab, CSlab)
     }
+
     public void AddQuest(QuestSO newQuest)
     {
         if (!activeQuests.Contains(newQuest) && !newQuest.isCompleted)
@@ -137,7 +138,6 @@ public class gameManager : MonoBehaviour
         // Remove completed quests from active
         activeQuests.RemoveAll(q => q.isCompleted);
     }
-
 
 
     // Update is called once per frame

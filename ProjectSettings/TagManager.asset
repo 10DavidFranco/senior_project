@@ -7,7 +7,6 @@ TagManager:
   - dude
   - bullet
   - wall
-  - p_bullet
   layers:
   - Default
   - TransparentFX
@@ -24,8 +23,8 @@ TagManager:
   - bullet
   - p_bullet
   - destroyable
-  - EnemyPlatform
-  - bees
+  - 
+  - 
   - 
   - 
   - 
