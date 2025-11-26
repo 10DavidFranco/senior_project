@@ -26,10 +26,14 @@ public class NPC : MonoBehaviour
     private Rigidbody2D rb;
     private bool movingfoward = true;
 
+    private Animator anim;
+
+
     void Start()
     {
-       
+
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         startPos = transform.position;
 
         if (moveVert)
@@ -75,33 +79,50 @@ public class NPC : MonoBehaviour
 
     void Movement()
     {
-        if (isTalking) {
+        if (isTalking)
+        {
 
             rb.linearVelocity = Vector2.zero;
+
+            anim.SetFloat("MoveX", 0f);
+            anim.SetFloat("MoveY", 0f);
+
+
             return;
         }
         Vector2 target = movingfoward ? endPos : startPos;
         Vector2 newpos = Vector2.MoveTowards(transform.position, target, movespeed * Time.fixedDeltaTime);
 
+
+        Vector2 direction = (newpos - (Vector2)transform.position).normalized;
+
         rb.MovePosition(newpos);
 
-        if ((Vector2)transform.position == target) {
+        if ((Vector2)transform.position == target)
+        {
             movingfoward = !movingfoward;
         }
+
+        anim.SetFloat("MoveX", direction.x);
+        anim.SetFloat("MoveY", direction.y);
+
+        Debug.Log(direction);
+
 
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         //if (other.CompareTag("Player"))
-            playerIsClose = true;
+        playerIsClose = true;
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         //if (other.CompareTag("Player"))
         //{
-            playerIsClose = false;
-            DialogueManager.Instance.EndDialogue();
+        playerIsClose = false;
+        DialogueManager.Instance.EndDialogue();
+        isTalking = false;
         //}
     }
 }
