@@ -66,13 +66,6 @@ public class Erik_E : MonoBehaviour
 
 
 
-
-
-
-
-
-
-
     void SpawnBeesPhase1()
     {
         // first spawn point only
@@ -86,7 +79,7 @@ public class Erik_E : MonoBehaviour
         Instantiate(beePrefab, spawnPoints[r].position, Quaternion.identity);
     }
 
-    // Existing hit detection & death logic
+    
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.layer == 13)
