@@ -133,6 +133,12 @@ public class manager : MonoBehaviour
 
     void checkExit()
     {
+        if (Input.GetButton("Cancel"))
+        {
+            
+            SceneManager.LoadScene("first_floor");
+        }
+
         if (exitsign.GetBool("hover"))//Don't want the player to be able to navigate the languages while hovering over exit sign
         {
             if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow)) //What to do if we are toggling through the exit sign

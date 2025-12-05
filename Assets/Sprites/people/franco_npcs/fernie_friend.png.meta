@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: 091b2f1f476165c4a9fac2a735779daa
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5498816680102536450
+    second: fernie_friend_0
+  - first:
+      213: -6607789305907276247
+    second: fernie_friend_1
+  - first:
+      213: -2104486087936663611
+    second: fernie_friend_2
+  - first:
+      213: -4265096748625143640
+    second: fernie_friend_3
+  - first:
+      213: 7623503953952264815
+    second: fernie_friend_4
+  - first:
+      213: -5119336006837795587
+    second: fernie_friend_5
+  - first:
+      213: 1581509073624455734
+    second: fernie_friend_6
+  - first:
+      213: 6578178926484007501
+    second: fernie_friend_7
+  - first:
+      213: -2281019601586563541
+    second: fernie_friend_8
+  - first:
+      213: -2354574292725651379
+    second: fernie_friend_9
+  - first:
+      213: 6262280095587059954
+    second: fernie_friend_10
+  - first:
+      213: 6783083651453430342
+    second: fernie_friend_11
+  - first:
+      213: -789896449851645704
+    second: fernie_friend_12
+  - first:
+      213: -2382591834789654182
+    second: fernie_friend_13
+  - first:
+      213: -1023838475940553749
+    second: fernie_friend_14
+  - first:
+      213: 6868801773446413672
+    second: fernie_friend_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fernie_friend_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 152
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2052186f2a8bf4c40800000000000000
+      internalID: 5498816680102536450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernie_friend_1
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 153
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92695c6c2aa6c44a0800000000000000
+      internalID: -6607789305907276247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernie_friend_2
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 152
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cf98c59d0d5bc2e0800000000000000
+      internalID: -2104486087936663611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernie_friend_3
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 153
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a85685ca155fc4c0800000000000000
+      internalID: -4265096748625143640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernie_friend_4
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 105
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f625c1f74702cc960800000000000000
+      internalID: 7623503953952264815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernie_friend_5
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 105
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df40192760774f8b0800000000000000
+      internalID: -5119336006837795587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernie_friend_6
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 105
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63a517e8f16a2f510800000000000000
+      internalID: 1581509073624455734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernie_friend_7
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 105
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4a2a0681e26a4b50800000000000000
+      internalID: 6578178926484007501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernie_friend_8
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 57
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b26dab9f1c03850e0800000000000000
+      internalID: -2281019601586563541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernie_friend_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 57
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4822d4e72fd25fd0800000000000000
+      internalID: -2354574292725651379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernie_friend_10
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 57
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f84775619618e650800000000000000
+      internalID: 6262280095587059954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernie_friend_11
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 57
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64a24a684aa522e50800000000000000
+      internalID: 6783083651453430342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernie_friend_12
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 8
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f020492d59b905f0800000000000000
+      internalID: -789896449851645704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernie_friend_13
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 9
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a51dd9a89555feed0800000000000000
+      internalID: -2382591834789654182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernie_friend_14
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 8
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beb9f26a4589ac1f0800000000000000
+      internalID: -1023838475940553749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fernie_friend_15
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 9
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86db8da02d2e25f50800000000000000
+      internalID: 6868801773446413672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fernie_friend_0: 5498816680102536450
+      fernie_friend_1: -6607789305907276247
+      fernie_friend_10: 6262280095587059954
+      fernie_friend_11: 6783083651453430342
+      fernie_friend_12: -789896449851645704
+      fernie_friend_13: -2382591834789654182
+      fernie_friend_14: -1023838475940553749
+      fernie_friend_15: 6868801773446413672
+      fernie_friend_2: -2104486087936663611
+      fernie_friend_3: -4265096748625143640
+      fernie_friend_4: 7623503953952264815
+      fernie_friend_5: -5119336006837795587
+      fernie_friend_6: 1581509073624455734
+      fernie_friend_7: 6578178926484007501
+      fernie_friend_8: -2281019601586563541
+      fernie_friend_9: -2354574292725651379
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

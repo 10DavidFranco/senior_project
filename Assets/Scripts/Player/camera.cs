@@ -98,6 +98,8 @@ public class camera : MonoBehaviour
         }
     }
 
+   
+
     void checkCollisions()
     {
         if (colleft)

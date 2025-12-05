@@ -7,8 +7,6 @@ TagManager:
   - dude
   - bullet
   - wall
-  - Floor
-  - Ceiling
   layers:
   - Default
   - TransparentFX

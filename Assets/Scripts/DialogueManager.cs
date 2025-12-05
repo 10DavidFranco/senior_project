@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    private bool npc_exempt;
     public GameObject dialoguePanel;
     public TextMeshProUGUI dialogueText;
     public GameObject namePanel;
@@ -24,15 +25,18 @@ public class DialogueManager : MonoBehaviour
         if (Instance == null)
             Instance = this;
         else
-            Destroy(gameObject);
+            //Destroy(gameObject);
 
         namePanel.SetActive(false);
         dialoguePanel.SetActive(false);
         continueButton.gameObject.SetActive(false);
     }
 
-    public void StartDialogue(string[] dialogueLines, Sprite portrait, string name)
+
+    //Limit the dialogue lines to the current_boss number
+    public void StartDialogue(string[] dialogueLines, Sprite portrait, string name, bool exempt)
     {
+        npc_exempt = exempt;
         if (typingCoroutine != null)
             StopCoroutine(typingCoroutine);
 
@@ -63,20 +67,43 @@ public class DialogueManager : MonoBehaviour
     public void NextLine()
     {
         continueButton.gameObject.SetActive(false);
+        //
 
-        if (index < currentDialogue.Length - 1)
+        if (npc_exempt) //Some characters will say all their dialogue all at once.
         {
-            index++;
-            StartCoroutine(TypeLine());
+            if (index < currentDialogue.Length - 1)
+            {
+                index++;
+                Debug.Log(index);
+                StartCoroutine(TypeLine());
+            }
+            else
+            {
+                EndDialogue();
+            }
         }
         else
         {
-            EndDialogue();
+            if (index < PlayerPrefs.GetInt("current_boss") + 1) //so that collectible quote can be included
+            {
+                index++;
+                Debug.Log(index);
+                StartCoroutine(TypeLine());
+            }
+            else
+            {
+                EndDialogue();
+            }
         }
+
+        
+
+        
     }
 
     public void EndDialogue()
     {
+        Debug.Log("ENDING DIALOGUE!");
         dialoguePanel.SetActive(false);
         namePanel.SetActive(false);
         dialogueText.text = "";

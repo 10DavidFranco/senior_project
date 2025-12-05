@@ -1453,6 +1453,22 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a857fcaaa74ae04189c3a23137abed7, type: 3}
+--- !u!114 &1620002340 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7038986887463365548, guid: 0a857fcaaa74ae04189c3a23137abed7, type: 3}
+  m_PrefabInstance: {fileID: 1620002339}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620002341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0454ff1bbc7044db3b7c487de1ad4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1620002341 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8477098568643522361, guid: 0a857fcaaa74ae04189c3a23137abed7, type: 3}
+  m_PrefabInstance: {fileID: 1620002339}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1783176859
 GameObject:
   m_ObjectHideFlags: 0
@@ -1464,13 +1480,14 @@ GameObject:
   - component: {fileID: 1783176860}
   - component: {fileID: 1783176862}
   - component: {fileID: 1783176861}
+  - component: {fileID: 1783176863}
   m_Layer: 0
   m_Name: final_boss_intro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1783176860
 Transform:
   m_ObjectHideFlags: 0
@@ -1563,6 +1580,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1783176863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783176859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f58bea2f011fd4246a5c59e90517b6f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tomai: {fileID: 823820208}
+  player: {fileID: 1620002341}
+  pm: {fileID: 1620002340}
 --- !u!1001 &2570222197216088148
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -568,6 +568,10 @@ PrefabInstance:
       propertyPath: bc
       value: 
       objectReference: {fileID: 1791420499}
+    - target: {fileID: 7038986887463365548, guid: 0a857fcaaa74ae04189c3a23137abed7, type: 3}
+      propertyPath: fighting_bonus_boss
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8477098568643522361, guid: 0a857fcaaa74ae04189c3a23137abed7, type: 3}
       propertyPath: m_Name
       value: Player 1

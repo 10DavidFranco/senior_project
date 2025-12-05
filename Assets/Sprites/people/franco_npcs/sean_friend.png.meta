@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: aa54890ab5ea79b48a67eeca5124f506
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1482808020676510305
+    second: sean_friend_0
+  - first:
+      213: 2677709059172355170
+    second: sean_friend_1
+  - first:
+      213: 4401468637199218675
+    second: sean_friend_2
+  - first:
+      213: 4186069219834034358
+    second: sean_friend_3
+  - first:
+      213: -6872041708139586453
+    second: sean_friend_4
+  - first:
+      213: -6036680268612614647
+    second: sean_friend_5
+  - first:
+      213: -1470688353523110081
+    second: sean_friend_6
+  - first:
+      213: 8487650643297738670
+    second: sean_friend_7
+  - first:
+      213: 5233495413994987143
+    second: sean_friend_8
+  - first:
+      213: 1797233535095481454
+    second: sean_friend_9
+  - first:
+      213: -2841369057180958392
+    second: sean_friend_10
+  - first:
+      213: 932199379121134948
+    second: sean_friend_11
+  - first:
+      213: -7186355302721004253
+    second: sean_friend_12
+  - first:
+      213: 7770439005393849472
+    second: sean_friend_13
+  - first:
+      213: -132536188513657002
+    second: sean_friend_14
+  - first:
+      213: -8282809662381246484
+    second: sean_friend_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sean_friend_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 152
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9df97126f10c6be0800000000000000
+      internalID: -1482808020676510305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sean_friend_1
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 153
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26c40d3c332292520800000000000000
+      internalID: 2677709059172355170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sean_friend_2
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 152
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f73842d768251d30800000000000000
+      internalID: 4401468637199218675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sean_friend_3
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 153
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b87765d6c7e71a30800000000000000
+      internalID: 4186069219834034358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sean_friend_4
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 105
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6cdba0e97a91a0a0800000000000000
+      internalID: -6872041708139586453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sean_friend_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 105
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9064cb68747693ca0800000000000000
+      internalID: -6036680268612614647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sean_friend_6
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 105
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3f63f80cb0179be0800000000000000
+      internalID: -1470688353523110081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sean_friend_7
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 105
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaf90636a413ac570800000000000000
+      internalID: 8487650643297738670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sean_friend_8
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 57
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78e9eccc95c11a840800000000000000
+      internalID: 5233495413994987143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sean_friend_9
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 57
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6429c5c06e01f810800000000000000
+      internalID: 1797233535095481454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sean_friend_10
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 57
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84141fe85ed6198d0800000000000000
+      internalID: -2841369057180958392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sean_friend_11
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 57
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46dda547566dfec00800000000000000
+      internalID: 932199379121134948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sean_friend_12
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 8
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32dd1975defe44c90800000000000000
+      internalID: -7186355302721004253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sean_friend_13
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 9
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08c07591b1526db60800000000000000
+      internalID: 7770439005393849472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sean_friend_14
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 8
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65f52cbe903292ef0800000000000000
+      internalID: -132536188513657002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sean_friend_15
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 9
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce7b79b0f7c8d0d80800000000000000
+      internalID: -8282809662381246484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sean_friend_0: -1482808020676510305
+      sean_friend_1: 2677709059172355170
+      sean_friend_10: -2841369057180958392
+      sean_friend_11: 932199379121134948
+      sean_friend_12: -7186355302721004253
+      sean_friend_13: 7770439005393849472
+      sean_friend_14: -132536188513657002
+      sean_friend_15: -8282809662381246484
+      sean_friend_2: 4401468637199218675
+      sean_friend_3: 4186069219834034358
+      sean_friend_4: -6872041708139586453
+      sean_friend_5: -6036680268612614647
+      sean_friend_6: -1470688353523110081
+      sean_friend_7: 8487650643297738670
+      sean_friend_8: 5233495413994987143
+      sean_friend_9: 1797233535095481454
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

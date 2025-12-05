@@ -5,6 +5,7 @@ public class dsa : MonoBehaviour
 {
     private bool able_to_enter = false;
     public gameManagersecondfloor gm;
+    public camera cam;
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -43,15 +44,18 @@ public class dsa : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return))//Did they press enter
         {
-            changeScene();
+            PlayerPrefs.SetInt("spawn", 8);
+            cam.showPlaque();
+            //changeScene();
+
         }
 
     }
 
-    void changeScene()
+  /*  void changeScene()
     {
         Debug.Log("Going into dsa"); //Coolm, change scenes
         PlayerPrefs.SetInt("spawn", 8);
         SceneManager.LoadScene("cs3");
-    }
+    }*/
 }

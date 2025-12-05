@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: 695d59d43682c6544aa7ecb3b5fa3297
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4801200347952175408
+    second: steven_friend_0
+  - first:
+      213: -7559961257604400834
+    second: steven_friend_1
+  - first:
+      213: -2278775222065600435
+    second: steven_friend_2
+  - first:
+      213: 607631874734320075
+    second: steven_friend_3
+  - first:
+      213: -1656542596182812744
+    second: steven_friend_4
+  - first:
+      213: -1204605831333843984
+    second: steven_friend_5
+  - first:
+      213: -6710172825810559330
+    second: steven_friend_6
+  - first:
+      213: 4890162102599571074
+    second: steven_friend_7
+  - first:
+      213: -8052198565753229254
+    second: steven_friend_8
+  - first:
+      213: 8450419094734635978
+    second: steven_friend_9
+  - first:
+      213: 4426423848579297995
+    second: steven_friend_10
+  - first:
+      213: 5086017171104811725
+    second: steven_friend_11
+  - first:
+      213: 5223547277814314509
+    second: steven_friend_12
+  - first:
+      213: -4958704562899538048
+    second: steven_friend_13
+  - first:
+      213: -787926317301118369
+    second: steven_friend_14
+  - first:
+      213: -3471113859694210701
+    second: steven_friend_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: steven_friend_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 152
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 039db23574a41a240800000000000000
+      internalID: 4801200347952175408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steven_friend_1
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 153
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3936c46a4f951790800000000000000
+      internalID: -7559961257604400834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steven_friend_2
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 152
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4861dd420a2060e0800000000000000
+      internalID: -2278775222065600435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steven_friend_3
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 153
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc96ebf78fdbe6800800000000000000
+      internalID: 607631874734320075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steven_friend_4
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 105
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b758371947c209e0800000000000000
+      internalID: -1656542596182812744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steven_friend_5
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 105
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fb6bf0f061684fe0800000000000000
+      internalID: -1204605831333843984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steven_friend_6
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 105
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9e1510fd5da0e2a0800000000000000
+      internalID: -6710172825810559330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steven_friend_7
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 105
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 286568be5885dd340800000000000000
+      internalID: 4890162102599571074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steven_friend_8
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 57
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a307e5b1118d04090800000000000000
+      internalID: -8052198565753229254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steven_friend_9
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 57
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac306d8f46be54570800000000000000
+      internalID: 8450419094734635978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steven_friend_10
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 57
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc2f2efb901dd6d30800000000000000
+      internalID: 4426423848579297995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steven_friend_11
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 57
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dca4d359ba9259640800000000000000
+      internalID: 5086017171104811725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steven_friend_12
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 8
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d06b499d294cd7840800000000000000
+      internalID: 5223547277814314509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steven_friend_13
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 9
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08fa34ee8742f2bb0800000000000000
+      internalID: -4958704562899538048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steven_friend_14
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 8
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5ac5146039b015f0800000000000000
+      internalID: -787926317301118369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: steven_friend_15
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 9
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 371ddf9d55024dfc0800000000000000
+      internalID: -3471113859694210701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      steven_friend_0: 4801200347952175408
+      steven_friend_1: -7559961257604400834
+      steven_friend_10: 4426423848579297995
+      steven_friend_11: 5086017171104811725
+      steven_friend_12: 5223547277814314509
+      steven_friend_13: -4958704562899538048
+      steven_friend_14: -787926317301118369
+      steven_friend_15: -3471113859694210701
+      steven_friend_2: -2278775222065600435
+      steven_friend_3: 607631874734320075
+      steven_friend_4: -1656542596182812744
+      steven_friend_5: -1204605831333843984
+      steven_friend_6: -6710172825810559330
+      steven_friend_7: 4890162102599571074
+      steven_friend_8: -8052198565753229254
+      steven_friend_9: 8450419094734635978
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

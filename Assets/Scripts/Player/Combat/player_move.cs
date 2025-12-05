@@ -30,6 +30,7 @@ public class player_move : MonoBehaviour
 
     public bool isAiming;
     private bool dieOnce;
+    public bool fighting_bonus_boss;
 
     Rigidbody2D rb;
     Animator animator;
@@ -236,7 +237,12 @@ public class player_move : MonoBehaviour
     {
         bc.Fail();
         yield return new WaitForSeconds(1.0f);
-        if(PlayerPrefs.GetInt("current_boss") <= 1)
+
+        if (fighting_bonus_boss)
+        {
+            SceneManager.LoadScene("bonus_bosses");
+
+        }else if(PlayerPrefs.GetInt("current_boss") <= 1)
         {
             SceneManager.LoadScene("first_floor");
         }

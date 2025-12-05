@@ -5,6 +5,8 @@ public class automata : MonoBehaviour
 {
     private bool able_to_enter = false;
     public gameManagersecondfloor gm;
+    public camera cam;
+
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -43,15 +45,18 @@ public class automata : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return))//Did they press enter
         {
-            changeScene();
+            //changeScene();
+            cam.showPlaque();
+            PlayerPrefs.SetInt("spawn", 10);
         }
 
     }
 
-    void changeScene()
+  /*  void changeScene()
     {
         Debug.Log("Going into automata"); //Coolm, change scenes
+        
         PlayerPrefs.SetInt("spawn", 10);
         SceneManager.LoadScene("cs4");
-    }
+    }*/
 }

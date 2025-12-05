@@ -28,6 +28,15 @@ public class NPC : MonoBehaviour
 
     private Animator anim;
 
+    public bool exempt;
+
+    //Collectible:
+
+   
+    public bool has_collectible;
+    public GameObject collectible_prefab;
+    //public Transform collectible_transform;
+
 
     void Start()
     {
@@ -61,7 +70,13 @@ public class NPC : MonoBehaviour
         {
 
             isTalking = true;
-            DialogueManager.Instance.StartDialogue(dialogueLines, portrait, npcName);
+            DialogueManager.Instance.StartDialogue(dialogueLines, portrait, npcName, exempt);
+            if (has_collectible)
+            {
+
+                spawnCollectible();
+            }
+           
             // to give
             if (questToGive != null && !questToGive.isActive && !questToGive.isCompleted)
             {
@@ -106,7 +121,7 @@ public class NPC : MonoBehaviour
         anim.SetFloat("MoveX", direction.x);
         anim.SetFloat("MoveY", direction.y);
 
-        Debug.Log(direction);
+        //Debug.Log(direction);
 
 
     }
@@ -124,5 +139,23 @@ public class NPC : MonoBehaviour
         DialogueManager.Instance.EndDialogue();
         isTalking = false;
         //}
+    }
+
+    private void spawnCollectible()
+    {
+
+        if(PlayerPrefs.GetString(collectible_prefab.name) != "complete")
+        {
+            Debug.Log("Activating side quest");
+            Debug.Log(collectible_prefab.name);
+            Debug.Log("//////////////////////");
+            collectible_prefab.SetActive(true);
+            PlayerPrefs.SetString(collectible_prefab.name, "active");
+        }
+        else
+        {
+            Debug.Log("You already completed my quest so i'm not spawning again.");
+        }
+        
     }
 }

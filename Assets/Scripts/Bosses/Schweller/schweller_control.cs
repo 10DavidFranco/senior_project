@@ -28,6 +28,7 @@ public class schweller_control : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        PlayerPrefs.SetInt("fought_schweller", PlayerPrefs.GetInt("fought_schweller") + 1);
         dieonce = false;
         StartCoroutine(firstphase());
     }

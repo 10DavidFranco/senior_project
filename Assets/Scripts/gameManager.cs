@@ -35,11 +35,11 @@ public class gameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // Optional: keeps it between scenes
+            //DontDestroyOnLoad(gameObject); // Optional: keeps it between scenes
         }
         else
         {
-            Destroy(gameObject); // Prevent duplicates
+            //Destroy(gameObject); // Prevent duplicates
         }
     }
 

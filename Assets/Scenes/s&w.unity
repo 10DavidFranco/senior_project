@@ -323,6 +323,7 @@ MonoBehaviour:
   schweller: {fileID: 418501614}
   wylie: {fileID: 926430390}
   player: {fileID: 948334043}
+  pm: {fileID: 494138371}
 --- !u!1 &244427820
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,6 +696,10 @@ PrefabInstance:
       propertyPath: bc
       value: 
       objectReference: {fileID: 950637891}
+    - target: {fileID: 7038986887463365548, guid: 0a857fcaaa74ae04189c3a23137abed7, type: 3}
+      propertyPath: fighting_bonus_boss
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8477098568643522361, guid: 0a857fcaaa74ae04189c3a23137abed7, type: 3}
       propertyPath: m_Name
       value: Player 1
@@ -704,6 +709,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a857fcaaa74ae04189c3a23137abed7, type: 3}
+--- !u!114 &494138371 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7038986887463365548, guid: 0a857fcaaa74ae04189c3a23137abed7, type: 3}
+  m_PrefabInstance: {fileID: 494138370}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948334043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0454ff1bbc7044db3b7c487de1ad4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &549165331
 GameObject:
   m_ObjectHideFlags: 0
@@ -1575,7 +1591,7 @@ Transform:
   m_GameObject: {fileID: 1881252347}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.04, y: -3.41, z: -1.0778002}
+  m_LocalPosition: {x: -0.12, y: -3.41, z: -1.0778002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
