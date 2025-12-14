@@ -12,8 +12,14 @@ public class player_movement : MonoBehaviour
 
     //to maintain the current direction the player is moving in.
     private bool hold = false;
-    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+
+    public AudioSource footstepSource;
+    public AudioClip footstepClip;
+
+
     void Start()
     {
         plaque_view = false;
@@ -29,10 +35,10 @@ public class player_movement : MonoBehaviour
             checkV();
             checkEscape();
         }
-        
-        //checkI();
-        
 
+        //checkI();
+
+        HandleFootsteps();
         
     }
 
@@ -46,6 +52,11 @@ public class player_movement : MonoBehaviour
             SceneManager.LoadScene("start_menu");
         }
     }
+    private bool IsMoving()
+    {
+        return rb.linearVelocity.sqrMagnitude > 0.01f;
+    }
+
 
     /*private void checkI()
     {
@@ -89,6 +100,26 @@ public class player_movement : MonoBehaviour
             hold = false;
         }
     }
+
+    private void HandleFootsteps()
+    {
+        if (IsMoving())
+        {
+            if (!footstepSource.isPlaying)
+            {
+                footstepSource.clip = footstepClip;
+                footstepSource.Play();
+            }
+        }
+        else
+        {
+            if (footstepSource.isPlaying)
+            {
+                footstepSource.Stop();
+            }
+        }
+    }
+
 
     private void checkV()
     {

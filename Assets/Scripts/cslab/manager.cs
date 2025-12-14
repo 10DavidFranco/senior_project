@@ -78,7 +78,12 @@ public class manager : MonoBehaviour
 
     //private List<Animator> langs = new List<Animator>();
     private lang[] langs;
-    
+
+
+    [Header("Audio")]
+    public AudioSource sfxSource;
+    public AudioClip audioClip;
+
 
     void Start()
     {
@@ -236,7 +241,9 @@ public class manager : MonoBehaviour
             {
                 cursor++;
             }
-            
+
+            sfxSource.PlayOneShot(audioClip);
+
             langs[cursor].anim.SetBool("in", true);
 
 

@@ -16,6 +16,21 @@ public class dietrich : MonoBehaviour
 
     public battle_cam bc;
     private bool dieonce;
+
+
+    [Header("Audio")]
+    public AudioSource sfxSource;
+
+    public AudioClip swingClip;
+    public AudioClip spawnClip;
+    public AudioClip callClip;
+
+    public AudioClip deathClip;
+
+
+
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -79,11 +94,14 @@ public class dietrich : MonoBehaviour
     ///////////////TENNIS PHASE///////////////////////////////////////////////////////////////
     private void Swing1()
     {
+
+        sfxSource.PlayOneShot(swingClip);
         anim.SetBool("swing1", true);
     }
 
     private void Swing2()
     {
+        sfxSource.PlayOneShot(swingClip);
         anim.SetBool("swing2", true);
     }
 
@@ -182,6 +200,8 @@ public class dietrich : MonoBehaviour
 
     public void spawnFunc() //Animator will call this to spawn function at correct time.
     {
+
+        sfxSource.PlayOneShot(spawnClip);
         float r = Random.Range(0f, 0.9f); //Rest to 0.0 to 1.0
         Debug.Log("r is " + r);
 
@@ -229,6 +249,7 @@ public class dietrich : MonoBehaviour
 
     public void CallFunc() //have the animation call this function when speech bubble appears
     {
+        sfxSource.PlayOneShot(callClip);
         call = true; //create several call variables for each function
     }
 
@@ -257,6 +278,8 @@ public class dietrich : MonoBehaviour
     IEnumerator Die()
     {
         //Player wins!!!
+
+
         bc.Pass();
         yield return new WaitForSeconds(1.0f);
         PlayerPrefs.SetInt("current_boss", 1);
@@ -269,6 +292,7 @@ public class dietrich : MonoBehaviour
         {
 
             dieonce = !dieonce;
+            sfxSource.PlayOneShot(deathClip);
             StartCoroutine(Die());
             
         }

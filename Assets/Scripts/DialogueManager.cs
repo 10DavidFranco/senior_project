@@ -18,6 +18,10 @@ public class DialogueManager : MonoBehaviour
     private int index;
     private Coroutine typingCoroutine;
 
+    public AudioSource dialogueSource;
+    public AudioClip typingClip;
+
+
     public static DialogueManager Instance; 
 
     private void Awake()
@@ -55,14 +59,27 @@ public class DialogueManager : MonoBehaviour
     IEnumerator TypeLine()
     {
         dialogueText.text = "";
-        foreach (char c in currentDialogue[index].ToCharArray())
+
+        if (typingClip != null)
+            dialogueSource.PlayOneShot(typingClip);
+
+        int soundCounter = 0;
+
+        foreach (char c in currentDialogue[index])
         {
             dialogueText.text += c;
+
+            if (c != ' ' && soundCounter % 2 == 0)
+                dialogueSource.PlayOneShot(typingClip, 0.6f);
+
+            soundCounter++;
             yield return new WaitForSeconds(wordSpeed);
         }
 
+
         continueButton.gameObject.SetActive(true);
     }
+
 
     public void NextLine()
     {

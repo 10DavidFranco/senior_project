@@ -5,6 +5,12 @@ public class battle_cam : MonoBehaviour
     public GameObject p_screen;
     public GameObject f_screen;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+
+    public AudioSource sfxSource;
+    public AudioClip passClip;
+    public AudioClip failClip;
+
     void Start()
     {
         
@@ -18,12 +24,14 @@ public class battle_cam : MonoBehaviour
 
     public void Pass()
     {
-        Instantiate(p_screen, this.transform);
+        sfxSource.PlayOneShot(passClip);
+        Instantiate(p_screen, transform);
     }
-
 
     public void Fail()
     {
-        Instantiate(f_screen, this.transform);
+        sfxSource.PlayOneShot(failClip);
+        Instantiate(f_screen, transform);
     }
+
 }

@@ -13,7 +13,13 @@ public class selector : MonoBehaviour
     private bool still_pressing_button;
     private int current_pos;
     private Rigidbody2D rb;
-    
+
+
+    [Header("Audio")]
+    public AudioSource sfxSource;
+    public AudioClip clip;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -120,7 +126,7 @@ public class selector : MonoBehaviour
                 break;
         }
 
-
+        sfxSource.PlayOneShot(clip);
         Debug.Log("You are now at position: " + current_pos);
     }
 }
