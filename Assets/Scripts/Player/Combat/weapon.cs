@@ -17,6 +17,10 @@ public class weapon : MonoBehaviour
     // controll the firing mode
     // 
 
+    public AudioSource gunSource;
+    public AudioClip shootClip;
+
+
     [Header("Bullet Colors")]
     private Color singleShotColor = Color.gray;
     private Color shotgunColor = Color.magenta;
@@ -142,6 +146,8 @@ public class weapon : MonoBehaviour
 
     void Shoot()
     {
+
+        gunSource.PlayOneShot(shootClip);
         switch (currentMode)
         {
             case FireMode.SingleShot:

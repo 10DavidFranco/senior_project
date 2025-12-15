@@ -6,6 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class player_move : MonoBehaviour
 {
+    [Header("Audio")]
+    public AudioSource sfxSource;
+
+    public AudioClip footstepClip;
+    public AudioClip jumpClip;
+    public AudioClip dashClip;
+    private bool wasMoving;
+
 
     [Header("Dashing")]
     public float dashspeed = 20f;
@@ -63,6 +71,7 @@ public class player_move : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
+            sfxSource.PlayOneShot(jumpClip);
             Debug.Log("jumping");
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
             isGrounded = false;
@@ -112,10 +121,35 @@ public class player_move : MonoBehaviour
         {
 
         }
+
+        bool isMoving = isGrounded && horizontalInput != 0f && !isAiming && !isDashing;
+
+        if (isMoving)
+        {
+            if (!sfxSource.isPlaying || sfxSource.clip != footstepClip)
+            {
+                sfxSource.clip = footstepClip;
+                sfxSource.loop = true;
+                sfxSource.Play();
+            }
+        }
+        else
+        {
+            if (sfxSource.clip == footstepClip)
+            {
+                sfxSource.Stop();
+                sfxSource.loop = false;
+            }
+        }
+
+
+
     }
 
     public IEnumerator Dash()
     {
+
+        sfxSource.PlayOneShot(dashClip);
         canDash = false;
         isDashing = true;
         float originalGravity = rb.gravityScale;

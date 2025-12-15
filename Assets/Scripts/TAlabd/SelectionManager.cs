@@ -51,7 +51,11 @@ public class GridSelection : MonoBehaviour
     private int cs4;
 
     private int current_subject_index;
-    
+
+    [Header("Audio")]
+    public AudioSource sfxSource;
+    public AudioClip moveClip;
+
 
     void Start()
     {
@@ -282,6 +286,8 @@ public class GridSelection : MonoBehaviour
     {
         if (!whiteboard.activeSelf) return;
 
+        int previousIndex = currentIndex;
+
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             if ((currentIndex + 1) % columns != 0 && currentIndex + 1 < items.Length)
@@ -303,7 +309,11 @@ public class GridSelection : MonoBehaviour
                 currentIndex += columns;
         }
 
-        UpdateSelectorPosition();
+        if (currentIndex != previousIndex)
+        {
+            sfxSource.PlayOneShot(moveClip);
+            UpdateSelectorPosition();
+        }
     }
 
     void UpdateSelectorPosition()

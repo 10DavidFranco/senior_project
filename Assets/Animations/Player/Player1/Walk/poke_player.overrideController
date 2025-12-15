@@ -8,4 +8,20 @@ AnimatorOverrideController:
   m_PrefabAsset: {fileID: 0}
   m_Name: poke_player
   m_Controller: {fileID: 9100000, guid: e0e01af5387f2b949bf71506cb7f3458, type: 2}
-  m_Clips: []
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 7d8a55e3a9208ec4c976ed887d3f2fda, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 0e925ebb12a992f46acd683819347514, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 79f25d8bde3dd12469539fef24925195, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ea8e584efcd244847bb730f52542b93f, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 219cf3075d34bea4c8a3c09290f8beb5, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: faf8f87d294e528469bb6fb9797f6ca5, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: d6cc589cdce668843afcd6e90fa9a6e3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 1fc66734d8137124a9409a26d755f6c1, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: c728ac5c5e1145c48a42181cc8cfc281, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3bb3dc89a69ed8149940ff6103ef6a27, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: ad9deaf1db2b8c94eb4396571c3c5401, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b40c00c81b9bf9c4d884ff831816e694, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: c4e997f39bffbaa46989bea3c0159d28, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a9f5b55ed1d16514291aee20fab80488, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 9918f3caf7ad5ab42a5f6b5aef73f64a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5390a8166f9f09346971a818e1055148, type: 2}
