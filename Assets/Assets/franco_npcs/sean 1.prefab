@@ -178,7 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Sean
   dialogueLines:
-  - cs3 quote
+  - Do you know your AVL rotations?
   portrait: {fileID: 2677709059172355170, guid: aa54890ab5ea79b48a67eeca5124f506, type: 3}
   questToGive: {fileID: 0}
   questToUpdate: {fileID: 0}

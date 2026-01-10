@@ -178,11 +178,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Manny
   dialogueLines:
-  - insert collectible quote
-  - quote 1
-  - quote 2
-  - quote 3
-  - quote 4
+  - Can you help me find my water bottle?
+  - Indexes, get used to em'.
+  - Pointers everywhere...
+  - Schweller will beat you in O(1) time.
+  - Just like a recognizer on rejected input, I WILL NOT HALT!
   portrait: {fileID: -5413981876355521131, guid: 9fab7e7ceb2100d4d990d297b1c84adb, type: 3}
   questToGive: {fileID: 0}
   questToUpdate: {fileID: 0}
@@ -190,8 +190,8 @@ MonoBehaviour:
   moveamount: 0
   moveVert: 0
   exempt: 0
-  has_collectible: 0
-  collectible_prefab: {fileID: 0}
+  has_collectible: 1
+  collectible_prefab: {fileID: 6450407405546919051, guid: 359eae2e26d24a24da82338a25bb6d1a, type: 3}
 --- !u!95 &1074667119764910642
 Animator:
   serializedVersion: 7

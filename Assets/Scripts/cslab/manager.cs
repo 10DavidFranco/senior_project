@@ -319,7 +319,7 @@ public class manager : MonoBehaviour
             }
         }
 
-        if(downloadable && Input.GetButtonDown("Submit"))
+        if(downloadable && Input.GetKeyDown(KeyCode.Z))
         {
             langs[cursor].installed = true;
             ShowInstall();

@@ -77,7 +77,7 @@ public class plaque : MonoBehaviour
             CycleLangs();
         }
 
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
             LoadBoss();
         }

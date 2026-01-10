@@ -66,7 +66,7 @@ public class NPC : MonoBehaviour
 
     void Talking()
     {
-        if (playerIsClose && Input.GetKeyDown(KeyCode.E))
+        if (playerIsClose && Input.GetKeyDown(KeyCode.Z))
         {
 
             isTalking = true;

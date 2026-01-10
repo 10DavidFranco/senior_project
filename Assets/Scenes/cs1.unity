@@ -769,7 +769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4377fc35372d333488b32ab2576d3930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 80
   lf: {fileID: 599241448}
   anim: {fileID: 1812325950}
   spawn: {fileID: 2105942131}

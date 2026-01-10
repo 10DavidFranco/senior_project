@@ -175,6 +175,6 @@ public class Ramos : MonoBehaviour
     {
         bc.Pass();
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene("first_floor");
+        SceneManager.LoadScene("bonus_bosses");
     }
 }

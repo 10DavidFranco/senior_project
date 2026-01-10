@@ -82,7 +82,8 @@ public class GridSelection : MonoBehaviour
             default:
                 break;
         }
-        UpdateSelectorPosition();
+        //UpdateSelectorPosition();
+        StartSelectorPosition();
         QuestionBoxes = new QuestionData[]
    {
         new QuestionData {
@@ -226,7 +227,7 @@ public class GridSelection : MonoBehaviour
             SceneManager.LoadScene("first_floor");
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
 
             if (dialoguePanel.activeInHierarchy)
@@ -316,9 +317,16 @@ public class GridSelection : MonoBehaviour
         }
     }
 
+    void StartSelectorPosition()
+    {
+        selector.position = new Vector3(-3.12f, 2.4f, 90f);
+    }
+
     void UpdateSelectorPosition()
     {
+        Debug.Log(items[currentIndex].transform.position);
         selector.position = items[currentIndex].transform.position;
+        Debug.Log(selector.position);
     }
 
 

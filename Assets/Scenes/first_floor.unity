@@ -871,7 +871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5616284049753187248, guid: 9bb40886f8a67534ea58461a233f6544, type: 3}
       propertyPath: npcName
-      value: Schweller
+      value: Tutorial dude
       objectReference: {fileID: 0}
     - target: {fileID: 5616284049753187248, guid: 9bb40886f8a67534ea58461a233f6544, type: 3}
       propertyPath: moveVert
@@ -1068,6 +1068,27 @@ PrefabInstance:
       propertyPath: collectible_prefab
       value: 
       objectReference: {fileID: 6154684145121801314, guid: 817eec1a58052214986b53844e0a2a80, type: 3}
+    - target: {fileID: 8512422497007994753, guid: ed3b342e835611e4fb2accdad9ff53b8, type: 3}
+      propertyPath: 'dialogueLines.Array.data[0]'
+      value: Can you help me find my chaos orb?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8512422497007994753, guid: ed3b342e835611e4fb2accdad9ff53b8, type: 3}
+      propertyPath: 'dialogueLines.Array.data[1]'
+      value: Forget the mistake, remember the lesson.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8512422497007994753, guid: ed3b342e835611e4fb2accdad9ff53b8, type: 3}
+      propertyPath: 'dialogueLines.Array.data[2]'
+      value: Ask and risk being a fool for a minute, or refrain and be a fool for
+        life.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8512422497007994753, guid: ed3b342e835611e4fb2accdad9ff53b8, type: 3}
+      propertyPath: 'dialogueLines.Array.data[3]'
+      value: Remember what you have learned.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8512422497007994753, guid: ed3b342e835611e4fb2accdad9ff53b8, type: 3}
+      propertyPath: 'dialogueLines.Array.data[4]'
+      value: You drown not by falling in a river, but by staying submerged in it.
+      objectReference: {fileID: 0}
     - target: {fileID: 9200020479794687998, guid: ed3b342e835611e4fb2accdad9ff53b8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.51
@@ -6536,8 +6557,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1924134857557404550, guid: eb04b7449cc3bf848a6265da0767738f, type: 3}
+      propertyPath: exempt
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924134857557404550, guid: eb04b7449cc3bf848a6265da0767738f, type: 3}
       propertyPath: npcName
-      value: dude3
+      value: Other dude
       objectReference: {fileID: 0}
     - target: {fileID: 1924134857557404550, guid: eb04b7449cc3bf848a6265da0767738f, type: 3}
       propertyPath: portrait
@@ -7712,6 +7737,26 @@ PrefabInstance:
       propertyPath: collectible_prefab
       value: 
       objectReference: {fileID: 4204806678203800777, guid: 94a2e7e5991bd7748be2273d6a7bb557, type: 3}
+    - target: {fileID: 5312055811209848489, guid: 92be59e0b32e2054ea9fea350525b9aa, type: 3}
+      propertyPath: 'dialogueLines.Array.data[0]'
+      value: Can you help me find my popcorn bucket?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5312055811209848489, guid: 92be59e0b32e2054ea9fea350525b9aa, type: 3}
+      propertyPath: 'dialogueLines.Array.data[1]'
+      value: Is this a loop?1 Is this a loop?2 Is this a loop?3 Is this a loop?4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5312055811209848489, guid: 92be59e0b32e2054ea9fea350525b9aa, type: 3}
+      propertyPath: 'dialogueLines.Array.data[2]'
+      value: Access and dereference. Access and dereference. Access and dereference.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5312055811209848489, guid: 92be59e0b32e2054ea9fea350525b9aa, type: 3}
+      propertyPath: 'dialogueLines.Array.data[3]'
+      value: The Whylie problem...why did he lie???
+      objectReference: {fileID: 0}
+    - target: {fileID: 5312055811209848489, guid: 92be59e0b32e2054ea9fea350525b9aa, type: 3}
+      propertyPath: 'dialogueLines.Array.data[4]'
+      value: Recognizer or decider? I'm more of a decider type of guy.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26797,10 +26842,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3678607979846707304, guid: 09bc28aa064589348b31683271738b3b, type: 3}
-      propertyPath: has_collectible
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3678607979846707304, guid: 09bc28aa064589348b31683271738b3b, type: 3}
       propertyPath: collectible_prefab
       value: 
       objectReference: {fileID: 421506073}
@@ -27058,6 +27099,27 @@ PrefabInstance:
       propertyPath: collectible_prefab
       value: 
       objectReference: {fileID: 1520235358121343264, guid: e85840dcf0fa2984785d6941a6ecd334, type: 3}
+    - target: {fileID: 1992428751896307696, guid: 24d740f702c34494997b1982d80e2157, type: 3}
+      propertyPath: 'dialogueLines.Array.data[0]'
+      value: Can you help me find my guitar?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992428751896307696, guid: 24d740f702c34494997b1982d80e2157, type: 3}
+      propertyPath: 'dialogueLines.Array.data[1]'
+      value: Welcome to the jungle, where only the strong compile.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992428751896307696, guid: 24d740f702c34494997b1982d80e2157, type: 3}
+      propertyPath: 'dialogueLines.Array.data[2]'
+      value: I got caught somewhere in time inside a recursive function.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992428751896307696, guid: 24d740f702c34494997b1982d80e2157, type: 3}
+      propertyPath: 'dialogueLines.Array.data[3]'
+      value: Your algorithm might work, but your runtime decides if Schweller lets
+        you live.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992428751896307696, guid: 24d740f702c34494997b1982d80e2157, type: 3}
+      propertyPath: 'dialogueLines.Array.data[4]'
+      value: My DFA has a dead state, and sometimes I do too.
+      objectReference: {fileID: 0}
     - target: {fileID: 5658671721272791980, guid: 24d740f702c34494997b1982d80e2157, type: 3}
       propertyPath: m_LocalPosition.x
       value: 32.8
@@ -27417,6 +27479,10 @@ PrefabInstance:
       value: 0.5208333
       objectReference: {fileID: 0}
     - target: {fileID: 6435717621171092247, guid: d5a85b7a4f30a7f44b15f09e577beaa9, type: 3}
+      propertyPath: exempt
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6435717621171092247, guid: d5a85b7a4f30a7f44b15f09e577beaa9, type: 3}
       propertyPath: npcName
       value: Lost student
       objectReference: {fileID: 0}
@@ -27662,10 +27728,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1301296961}
     m_Modifications:
     - target: {fileID: 5050304236307682489, guid: e2626aac14da23d4ea58053b10e5bc57, type: 3}
-      propertyPath: has_collectible
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5050304236307682489, guid: e2626aac14da23d4ea58053b10e5bc57, type: 3}
       propertyPath: collectible_prefab
       value: 
       objectReference: {fileID: 9023310098668603292}
@@ -27712,10 +27774,6 @@ PrefabInstance:
     - target: {fileID: 6097422294777219387, guid: e2626aac14da23d4ea58053b10e5bc57, type: 3}
       propertyPath: m_Name
       value: fernie
-      objectReference: {fileID: 0}
-    - target: {fileID: 6097422294777219387, guid: e2626aac14da23d4ea58053b10e5bc57, type: 3}
-      propertyPath: m_Layer
-      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28018,10 +28076,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: sean
       objectReference: {fileID: 0}
-    - target: {fileID: 3819736393760659621, guid: b5de37956b2aa8e45b9a851b0950ea5d, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 7058017093132088048, guid: b5de37956b2aa8e45b9a851b0950ea5d, type: 3}
       propertyPath: has_collectible
       value: 1
@@ -28031,28 +28085,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5485291048445452050}
     - target: {fileID: 7058017093132088048, guid: b5de37956b2aa8e45b9a851b0950ea5d, type: 3}
-      propertyPath: dialogueLines.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7058017093132088048, guid: b5de37956b2aa8e45b9a851b0950ea5d, type: 3}
       propertyPath: 'dialogueLines.Array.data[0]'
-      value: '[insert collectible dialogue]'
+      value: Can you help me find my cap?
       objectReference: {fileID: 0}
     - target: {fileID: 7058017093132088048, guid: b5de37956b2aa8e45b9a851b0950ea5d, type: 3}
       propertyPath: 'dialogueLines.Array.data[1]'
-      value: '[insert  dialogue 1]'
+      value: Can you handle a 2D array yet?
       objectReference: {fileID: 0}
     - target: {fileID: 7058017093132088048, guid: b5de37956b2aa8e45b9a851b0950ea5d, type: 3}
       propertyPath: 'dialogueLines.Array.data[2]'
-      value: '[insert  dialogue 2]'
+      value: Memory allocation, so much fun!
       objectReference: {fileID: 0}
     - target: {fileID: 7058017093132088048, guid: b5de37956b2aa8e45b9a851b0950ea5d, type: 3}
       propertyPath: 'dialogueLines.Array.data[3]'
-      value: '[insert  dialogue 3]'
+      value: Do you know your AVL rotations?
       objectReference: {fileID: 0}
     - target: {fileID: 7058017093132088048, guid: b5de37956b2aa8e45b9a851b0950ea5d, type: 3}
       propertyPath: 'dialogueLines.Array.data[4]'
-      value: '[insert  dialogue 4]'
+      value: You know a DFA is computationally equivalent to an NFA?
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28076,6 +28126,10 @@ PrefabInstance:
       propertyPath: exempt
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 174736067106864849, guid: 110a080e64878114a9d777942b0873e9, type: 3}
+      propertyPath: portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 885213fab7dc5df4aa56bb158d0379de, type: 3}
     - target: {fileID: 174736067106864849, guid: 110a080e64878114a9d777942b0873e9, type: 3}
       propertyPath: dialogueLines.Array.size
       value: 4
@@ -28219,6 +28273,10 @@ PrefabInstance:
       propertyPath: exempt
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8980541264595738297, guid: 8499d2e25bd362f4080c01b89b2e88b3, type: 3}
+      propertyPath: portrait
+      value: 
+      objectReference: {fileID: 5288098174385392086, guid: 757d31df8cbaae94394676d285517402, type: 3}
     - target: {fileID: 8980541264595738297, guid: 8499d2e25bd362f4080c01b89b2e88b3, type: 3}
       propertyPath: dialogueLines.Array.size
       value: 4

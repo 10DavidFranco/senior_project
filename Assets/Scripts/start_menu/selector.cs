@@ -8,6 +8,7 @@ public class selector : MonoBehaviour
     public Transform bonus_pos;
     public Transform option_pos;
     public Transform exit_pos;
+    public Transform reset_pos;
 
 
     private bool still_pressing_button;
@@ -88,10 +89,14 @@ public class selector : MonoBehaviour
                 SceneManager.LoadScene("bonus_bosses");
                 break;
             case 2:
+                SceneManager.LoadScene("control_menu");
                 Debug.Log("OPTIONS MENU");
                 break;
             case 3:
                 Application.Quit();
+                break;
+            case 4:
+                PlayerPrefs.DeleteAll();
                 break;
             default:
                 break;
@@ -100,12 +105,12 @@ public class selector : MonoBehaviour
 
     void MovePos()
     {
-        if(current_pos > 3)
+        if(current_pos > 4)
         {
             current_pos = 0;
         }else if(current_pos < 0)
         {
-            current_pos = 3;
+            current_pos = 4;
         }
 
         switch (current_pos)
@@ -121,6 +126,9 @@ public class selector : MonoBehaviour
                 break;
             case 3:
                 this.transform.position = exit_pos.position;
+                break;
+            case 4:
+                this.transform.position = reset_pos.position;
                 break;
             default:
                 break;

@@ -20,7 +20,8 @@ public class wylie_duo : MonoBehaviour
 
     public Animator anim;
     public Rigidbody2D rb;
-   
+    public bool touching_the_same_wall;
+    public fight_manager fm;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -105,6 +106,7 @@ public class wylie_duo : MonoBehaviour
     {
 
         dashing = true;
+        touching_the_same_wall = false;
         Debug.Log("dashing has been activated!");
     }
 
@@ -119,10 +121,15 @@ public class wylie_duo : MonoBehaviour
     {
         if(col.gameObject.tag == "wall" && !only_flip_once)
         {
-            Debug.Log("You hit a wall!");
-            StopDash();
-            only_flip_once = true;
-            facing_left = !facing_left;
+            if (!touching_the_same_wall)
+            {
+                touching_the_same_wall = true;
+                Debug.Log("You hit a wall!");
+                StopDash();
+                only_flip_once = true;
+                facing_left = !facing_left;
+            }
+            
         }else if(col.gameObject.layer == 13)
         {
             health--;
@@ -138,6 +145,8 @@ public class wylie_duo : MonoBehaviour
     {
         if (health <= 0)
         {
+            fm.w_dead = true;
+            fm.checkDead();
             Destroy(this.gameObject);
         }
     }

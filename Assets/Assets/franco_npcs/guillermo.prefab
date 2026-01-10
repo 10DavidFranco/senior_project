@@ -178,11 +178,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Guillermo
   dialogueLines:
-  - collectible quote
-  - quote 1
-  - quote 2
-  - quote 3
-  - quote 4
+  - Can you help me find my guitar?
+  - Welcome to the jungle, where only the strong compile.
+  - I got caught somewhere in time inside a recursive function.
+  - Your algorithm might work, but your runtime decides if Schweller lets you live.
+  - My DFA has a dead state, and sometimes I do too.
   portrait: {fileID: 6438812547882956621, guid: 8322937db3aea6843a077a9d4495359a, type: 3}
   questToGive: {fileID: 0}
   questToUpdate: {fileID: 0}
@@ -190,8 +190,8 @@ MonoBehaviour:
   moveamount: 2
   moveVert: 1
   exempt: 0
-  has_collectible: 0
-  collectible_prefab: {fileID: 0}
+  has_collectible: 1
+  collectible_prefab: {fileID: 1520235358121343264, guid: e85840dcf0fa2984785d6941a6ecd334, type: 3}
 --- !u!95 &4762311836606891193
 Animator:
   serializedVersion: 7

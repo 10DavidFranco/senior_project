@@ -178,7 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Steven
   dialogueLines:
-  - cs3 quote
+  - The Whylie problem...why did he lie???
   portrait: {fileID: -7559961257604400834, guid: 695d59d43682c6544aa7ecb3b5fa3297, type: 3}
   questToGive: {fileID: 0}
   questToUpdate: {fileID: 0}

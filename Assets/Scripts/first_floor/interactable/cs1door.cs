@@ -45,7 +45,7 @@ public class cs1door : MonoBehaviour
     void checkExecute()
     {
 
-        if (Input.GetKeyDown(KeyCode.Return))//Did they press enter
+        if (Input.GetKeyDown(KeyCode.Z))//Did they press enter
         {
             //changeScene();
             PlayerPrefs.SetInt("spawn", 3);

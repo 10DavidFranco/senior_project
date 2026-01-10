@@ -54,7 +54,7 @@ public class weapon : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKey(KeyCode.RightControl) && pm.isGrounded)
+        if (Input.GetKey(KeyCode.X) && pm.isGrounded)
         {
             pm.isAiming = true;
 

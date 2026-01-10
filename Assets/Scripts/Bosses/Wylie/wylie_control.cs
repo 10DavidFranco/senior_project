@@ -40,14 +40,18 @@ public class wylie_control : MonoBehaviour
 
     IEnumerator first_phase()
     {
-        yield return new WaitForSeconds(3.0f);
-        ThrowPaper();
-        yield return new WaitForSeconds(3.0f);
-        ThrowPaper();
-        yield return new WaitForSeconds(3.0f);
-        ThrowPaper();
-        yield return new WaitForSeconds(3.0f);
-        SwingPencil();
+        while(health > 0)
+        {
+            yield return new WaitForSeconds(3.0f);
+            ThrowPaper();
+            yield return new WaitForSeconds(3.0f);
+            ThrowPaper();
+            yield return new WaitForSeconds(3.0f);
+            ThrowPaper();
+            yield return new WaitForSeconds(3.0f);
+            SwingPencil();
+        }
+       
     }
     //Pencil Attack
     void SwingPencil()

@@ -178,11 +178,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Rudy
   dialogueLines:
-  - '[insert collectible quote]'
-  - '[insert quote 1'
-  - '[insert quote 2'
-  - '[insert quote 3'
-  - '[insert quote 4'
+  - Can you help me find my chaos orb?
+  - Forget the mistake, remember the lesson.
+  - Ask and risk being a fool for a minute, or refrain and be a fool for life.
+  - Remember what you have learned.
+  - You drown not by falling in a river, but by staying submerged in it.
   portrait: {fileID: -6946746410865851576, guid: 422ace7c21ddc0e4d9dfb4c30c4fe77e, type: 3}
   questToGive: {fileID: 0}
   questToUpdate: {fileID: 0}
@@ -190,8 +190,8 @@ MonoBehaviour:
   moveamount: 0
   moveVert: 0
   exempt: 0
-  has_collectible: 0
-  collectible_prefab: {fileID: 0}
+  has_collectible: 1
+  collectible_prefab: {fileID: 6154684145121801314, guid: 817eec1a58052214986b53844e0a2a80, type: 3}
 --- !u!95 &7378700430492442042
 Animator:
   serializedVersion: 7

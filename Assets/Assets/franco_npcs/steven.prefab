@@ -178,11 +178,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Steven
   dialogueLines:
-  - '[insert collectible quote]'
-  - '[insert first quote]'
-  - '[insert second quote]'
-  - '[insert third quote]'
-  - '[insert fourth quote]'
+  - Can you help me find my popcorn bucket?
+  - Is this a loop?1 Is this a loop?2 Is this a loop?3 Is this a loop?4
+  - Access and dereference. Access and dereference. Access and dereference.
+  - The Whylie problem...why did he lie???
+  - Recognizer or decider? I'm more of a decider type of guy.
   portrait: {fileID: -7559961257604400834, guid: 695d59d43682c6544aa7ecb3b5fa3297, type: 3}
   questToGive: {fileID: 0}
   questToUpdate: {fileID: 0}
@@ -190,8 +190,8 @@ MonoBehaviour:
   moveamount: 0
   moveVert: 0
   exempt: 0
-  has_collectible: 0
-  collectible_prefab: {fileID: 0}
+  has_collectible: 1
+  collectible_prefab: {fileID: 4204806678203800777, guid: 94a2e7e5991bd7748be2273d6a7bb557, type: 3}
 --- !u!95 &3519629773412290270
 Animator:
   serializedVersion: 7

@@ -10,7 +10,7 @@ public class tomai_control : MonoBehaviour
     public battle_cam bc;
     private bool dieonce;
 
-
+    public float intro_duration;
 
     public block_generator b_g;
     public hook_generator hk;
@@ -29,7 +29,7 @@ public class tomai_control : MonoBehaviour
 
     IEnumerator first_phase() 
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(intro_duration);
         b_g.spawnHTML();
         yield return new WaitForSeconds(1.0f);
         hk.CastHook(cast_hook_low);

@@ -178,7 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Rudy
   dialogueLines:
-  - cs3 quote
+  - Remember what you have learned.
   portrait: {fileID: -6946746410865851576, guid: 422ace7c21ddc0e4d9dfb4c30c4fe77e, type: 3}
   questToGive: {fileID: 0}
   questToUpdate: {fileID: 0}

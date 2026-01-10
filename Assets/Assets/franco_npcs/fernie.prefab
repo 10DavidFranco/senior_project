@@ -178,11 +178,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Fernando
   dialogueLines:
-  - collectible quote
-  - quote 1
-  - quote 2
-  - quote 3
-  - quote 4
+  - Can you help me find my motorcycle helmet?
+  - I can do this! print(hello world)
+  - Ayati? Best professor I ever had.
+  - I won't be messing with him.
+  - You spin my head right round, right round.
   portrait: {fileID: -6607789305907276247, guid: 091b2f1f476165c4a9fac2a735779daa, type: 3}
   questToGive: {fileID: 0}
   questToUpdate: {fileID: 0}
@@ -190,8 +190,8 @@ MonoBehaviour:
   moveamount: 0
   moveVert: 0
   exempt: 0
-  has_collectible: 0
-  collectible_prefab: {fileID: 0}
+  has_collectible: 1
+  collectible_prefab: {fileID: 7420391254868792532, guid: d999ccda99a4f744db84943297d33b58, type: 3}
 --- !u!95 &3920799993416331292
 Animator:
   serializedVersion: 7

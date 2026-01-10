@@ -191,7 +191,7 @@ MonoBehaviour:
   moveVert: 0
   exempt: 0
   has_collectible: 0
-  collectible_prefab: {fileID: 0}
+  collectible_prefab: {fileID: 7139251134887602057, guid: 215e995c21544e748886e395bacbd3f8, type: 3}
 --- !u!95 &3362646697717152218
 Animator:
   serializedVersion: 7

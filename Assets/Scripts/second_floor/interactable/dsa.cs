@@ -42,7 +42,7 @@ public class dsa : MonoBehaviour
     void checkExecute()
     {
 
-        if (Input.GetKeyDown(KeyCode.Return))//Did they press enter
+        if (Input.GetKeyDown(KeyCode.Z))//Did they press enter
         {
             PlayerPrefs.SetInt("spawn", 8);
             cam.showPlaque();

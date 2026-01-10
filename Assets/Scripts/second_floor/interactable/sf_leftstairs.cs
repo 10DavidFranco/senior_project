@@ -36,7 +36,7 @@ public class sf_leftstairs : MonoBehaviour
     void checkExecute()
     {
 
-        if (Input.GetKeyDown(KeyCode.Return))//do they want to go upstairs?
+        if (Input.GetKeyDown(KeyCode.Z))//do they want to go upstairs?
         {
             changeScene();
         }

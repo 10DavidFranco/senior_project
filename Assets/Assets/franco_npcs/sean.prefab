@@ -178,11 +178,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Sean
   dialogueLines:
-  - '[insert collectible dialogue]'
-  - '[insert quote 1]'
-  - '[insert quote 2]'
-  - '[insert quote 3]'
-  - '[insert quote 4]'
+  - Can you help me find my cap?
+  - Can you handle a 2D array yet?
+  - Memory allocation, so much fun!
+  - Do you know your AVL rotations?
+  - You know a DFA is computationally equivalent to an NFA?
   portrait: {fileID: 2677709059172355170, guid: aa54890ab5ea79b48a67eeca5124f506, type: 3}
   questToGive: {fileID: 0}
   questToUpdate: {fileID: 0}
@@ -190,8 +190,8 @@ MonoBehaviour:
   moveamount: 0
   moveVert: 0
   exempt: 0
-  has_collectible: 0
-  collectible_prefab: {fileID: 0}
+  has_collectible: 1
+  collectible_prefab: {fileID: 5133736755500740527, guid: 7e291b61b8892dd4d8ba2e6af861e823, type: 3}
 --- !u!95 &1054304756713238479
 Animator:
   serializedVersion: 7

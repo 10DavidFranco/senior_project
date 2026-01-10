@@ -58,7 +58,12 @@ public class gameManagersecondfloor : MonoBehaviour
                 Destroy(halfway);
                 finalboss();
                 break;
-            
+            case 5:
+                cs3 = false;
+                cs4 = false;
+                Destroy(halfway);
+                //finalboss();
+                break;
 
             default:
                 break;

@@ -8,7 +8,7 @@ public class tomai_intro : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        tomai.SetActive(false);
+        //tomai.SetActive(false);
        
         player.SetActive(false);
     }

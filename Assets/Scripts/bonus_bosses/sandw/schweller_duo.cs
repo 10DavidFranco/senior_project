@@ -11,6 +11,7 @@ public class schweller_duo : MonoBehaviour
     public bool is_walking;
     public bool walk_once;
     public float intro_delay;
+    public fight_manager fm;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -88,6 +89,8 @@ public class schweller_duo : MonoBehaviour
     {
         if(health <= 0)
         {
+            fm.s_dead = true;
+            fm.checkDead();
             Destroy(this.gameObject);
         }
     }

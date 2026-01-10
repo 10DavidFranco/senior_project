@@ -4,6 +4,8 @@ public class battle_cam : MonoBehaviour
 {
     public GameObject p_screen;
     public GameObject f_screen;
+    public bool pass;
+    public bool fail;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
 
@@ -13,7 +15,8 @@ public class battle_cam : MonoBehaviour
 
     void Start()
     {
-        
+        pass = false;
+        fail = false;
     }
 
     // Update is called once per frame
@@ -24,14 +27,25 @@ public class battle_cam : MonoBehaviour
 
     public void Pass()
     {
-        sfxSource.PlayOneShot(passClip);
-        Instantiate(p_screen, transform);
+        if (!fail)
+        {
+            pass = true;
+            sfxSource.PlayOneShot(passClip);
+            Instantiate(p_screen, transform);
+        }
+     
     }
 
     public void Fail()
     {
-        sfxSource.PlayOneShot(failClip);
-        Instantiate(f_screen, transform);
+
+        if (!pass)
+        {
+            fail = true;
+            sfxSource.PlayOneShot(failClip);
+            Instantiate(f_screen, transform);
+        }
+    
     }
 
 }

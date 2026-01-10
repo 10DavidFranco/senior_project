@@ -178,7 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Fernando
   dialogueLines:
-  - cs3 quote
+  - I won't be messing with him.
   portrait: {fileID: -6607789305907276247, guid: 091b2f1f476165c4a9fac2a735779daa, type: 3}
   questToGive: {fileID: 0}
   questToUpdate: {fileID: 0}

@@ -96,7 +96,13 @@ public class gameManager : MonoBehaviour
                 upstairs_middle = true;
                 Destroy(halfway);
                 break;
-
+            case 5:
+                cs1 = false;
+                cs2 = false;
+                upstairs_left = true;
+                upstairs_middle = true;
+                Destroy(halfway);
+                break;
             default:
                 break;
 

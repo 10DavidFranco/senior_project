@@ -711,6 +711,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4788778486483677592, guid: 1938983c6fd15f541975068e2007ca62, type: 3}
+      propertyPath: p_screen
+      value: 
+      objectReference: {fileID: 287994801863432202, guid: 708a9a5e72f474e42b4005b0282a50ec, type: 3}
     - target: {fileID: 5242517625416460150, guid: 1938983c6fd15f541975068e2007ca62, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.23
@@ -1008,6 +1012,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 30
   bc: {fileID: 687470652}
+  intro_duration: 10
   b_g: {fileID: 247874207}
   hk: {fileID: 377844777}
   rg: {fileID: 1530348233}

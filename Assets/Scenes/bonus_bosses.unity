@@ -1051,13 +1051,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bce8195bd72bf143b401f060a47894e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  two: {fileID: 20616691}
-  five: {fileID: 122487243}
-  seven: {fileID: 1910022665}
   boss1_pos: {fileID: 1676754631}
   boss2_pos: {fileID: 1318151352}
   boss3_pos: {fileID: 278450260}
-  collectible_count: 0
+  boss1_label: {fileID: 20616691}
+  boss2_label: {fileID: 122487243}
+  boss3_label: {fileID: 1910022665}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

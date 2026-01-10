@@ -178,7 +178,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Guillermo
   dialogueLines:
-  - cs3 quote
+  - Your algorithm might work, but your runtime will decide if Schweller lets you
+    live.
   portrait: {fileID: 6438812547882956621, guid: 8322937db3aea6843a077a9d4495359a, type: 3}
   questToGive: {fileID: 0}
   questToUpdate: {fileID: 0}

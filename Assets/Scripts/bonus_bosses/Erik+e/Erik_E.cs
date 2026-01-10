@@ -109,6 +109,6 @@ public class Erik_E : MonoBehaviour
     {
         bc.Pass();
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene("first_floor");
+        SceneManager.LoadScene("bonus_bosses");
     }
 }

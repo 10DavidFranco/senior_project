@@ -10,7 +10,7 @@ public class ayati_control : MonoBehaviour
     public battle_cam bc;
     private bool dieonce;
     public Animator anim;
-    public AnimationClip ground_hit_clip;
+    //public AnimationClip ground_hit_clip;
 
     private float arm_decider;
     public GameObject ll_arm_prefab;
@@ -23,9 +23,9 @@ public class ayati_control : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        AnimationClipSettings settings = AnimationUtility.GetAnimationClipSettings(ground_hit_clip);
-        settings.loopTime = false;
-        AnimationUtility.SetAnimationClipSettings(ground_hit_clip, settings);
+        //AnimationClipSettings settings = AnimationUtility.GetAnimationClipSettings(ground_hit_clip);
+        //settings.loopTime = false;
+        //AnimationUtility.SetAnimationClipSettings(ground_hit_clip, settings);
         StartCoroutine(FirstPhase());
     }
 
@@ -69,9 +69,9 @@ public class ayati_control : MonoBehaviour
             EndArmAttack();
             yield return new WaitForSeconds(1.0f);
         }
-        AnimationClipSettings settings = AnimationUtility.GetAnimationClipSettings(ground_hit_clip);
-        settings.loopTime = true;
-        AnimationUtility.SetAnimationClipSettings(ground_hit_clip, settings);
+        //AnimationClipSettings settings = AnimationUtility.GetAnimationClipSettings(ground_hit_clip);
+        //settings.loopTime = true;
+        //AnimationUtility.SetAnimationClipSettings(ground_hit_clip, settings);
         while (health > 0)
         {
             Debug.Log("LAST PHASE");
@@ -125,9 +125,9 @@ public class ayati_control : MonoBehaviour
     IEnumerator Die()
     {
         //Player wins!!!
-        AnimationClipSettings settings = AnimationUtility.GetAnimationClipSettings(ground_hit_clip);
-        settings.loopTime = false;
-        AnimationUtility.SetAnimationClipSettings(ground_hit_clip, settings);
+        //AnimationClipSettings settings = AnimationUtility.GetAnimationClipSettings(ground_hit_clip);
+        //settings.loopTime = false;
+        //AnimationUtility.SetAnimationClipSettings(ground_hit_clip, settings);
         bc.Pass();
         yield return new WaitForSeconds(1.0f);
         PlayerPrefs.SetInt("current_boss", 2);

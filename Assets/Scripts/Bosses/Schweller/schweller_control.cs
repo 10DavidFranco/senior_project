@@ -41,12 +41,16 @@ public class schweller_control : MonoBehaviour
 
     IEnumerator firstphase()
     {
-        yield return new WaitForSeconds(3.0f);
-        ThrowPlate();
-        yield return new WaitForSeconds(3.0f);
-        ThrowPlate();
-        yield return new WaitForSeconds(3.0f);
-        SpawnTree();
+        while(health > 0)
+        {
+            yield return new WaitForSeconds(3.0f);
+            ThrowPlate();
+            yield return new WaitForSeconds(3.0f);
+            SpawnTree();
+            yield return new WaitForSeconds(3.0f);
+            SpawnTree();
+        }
+        
     }
 
     //Tree Scroll

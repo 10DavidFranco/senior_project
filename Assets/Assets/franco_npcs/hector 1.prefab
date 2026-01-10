@@ -178,7 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Hector
   dialogueLines:
-  - cs3 quote
+  - Schweller? We are so cooked. This class ain't what I thought it was.
   portrait: {fileID: -5020799652934071206, guid: b7c2ed47d3dac974698ac07913fc0f59, type: 3}
   questToGive: {fileID: 0}
   questToUpdate: {fileID: 0}

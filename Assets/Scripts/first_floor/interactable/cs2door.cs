@@ -48,7 +48,7 @@ public class cs2door : MonoBehaviour
     void checkExecute()
     {
 
-        if (Input.GetKeyDown(KeyCode.Return))//Did they press enter
+        if (Input.GetKeyDown(KeyCode.Z))//Did they press enter
         {
             PlayerPrefs.SetInt("spawn", 5);
             cam.showPlaque();

@@ -101,16 +101,33 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            if (index < PlayerPrefs.GetInt("current_boss") + 1) //so that collectible quote can be included
+            if(PlayerPrefs.GetInt("current_boss") >= 4)
             {
-                index++;
-                Debug.Log(index);
-                StartCoroutine(TypeLine());
+                if (index < 4) //so that collectible quote can be included
+                {
+                    index++;
+                    Debug.Log(index);
+                    StartCoroutine(TypeLine());
+                }
+                else
+                {
+                    EndDialogue();
+                }
             }
             else
             {
-                EndDialogue();
+                if (index < PlayerPrefs.GetInt("current_boss") + 1) //so that collectible quote can be included
+                {
+                    index++;
+                    Debug.Log(index);
+                    StartCoroutine(TypeLine());
+                }
+                else
+                {
+                    EndDialogue();
+                }
             }
+           
         }
 
         
